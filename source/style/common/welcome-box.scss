@@ -1,8 +1,6 @@
 .l-welcome-box {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  @include centered();
 
   &__content {
     padding-top: 40px;
@@ -36,7 +34,7 @@
       transition: .5s;
       border-left: 2px solid transparentize(#dee3e7, .5);
       background:  transparentize($main_color, .15);
-      padding:14px 31px;
+      padding:14px 0px;
       &:first-child {
         border-radius: 0px 0px 0px 4px;
         border-left:none;

@@ -1,11 +1,9 @@
 .c-socials {
-  text-align: center;
-  width: 100%;
+
   &__social-icon {
     text-decoration: none;
     .c-social-icon__svg {
       width: 31px;
-      fill: $main_color;
       opacity: 0.5;
       height: 22px;
       &:hover {
@@ -13,4 +11,20 @@
       }
     }
   }
+  &_welcome {
+    text-align: center;
+    width: 100%;
+    .c-social-icon__svg {
+      fill: $main_color;
+    }
+  }
+  &_header {
+    .c-socials__social-icon {
+      padding: 0px 10px;
+      .c-social-icon__svg {
+        fill: #fff;
+      }
+    }
+  }
 }
+

@@ -1,0 +1,47 @@
+$header_h: 600px;
+.l-header {
+  width: 100%;
+  height:$header_h;
+  position: relative;
+  &__bg {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  &__color-filter {
+    width: 100%;
+    position: absolute;
+    height: $header_h;
+    opacity: .3;
+    background: #016672;
+    top: 0px;
+    left: 0px;
+  }
+  &__portfolio {
+    width: 100%;
+    height: $header_h;
+    opacity: .06;
+    fill: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .c-socials_header {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+  }
+  .c-header__menu {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 40px;
+    height: 35px;
+    fill: #fff;
+  }
+  &__hero {
+    position: absolute;
+    @include centered()
+  }
+}

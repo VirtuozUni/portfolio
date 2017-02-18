@@ -7,3 +7,8 @@ mixin socials(items)
         a.c-socials__social-icon(href=`${item['link']}` target="_blank")
             svg.c-social-icon__svg
                 use(xlink:href=`assets/img/sprite.svg#${item['icon']}`)
+mixin hero(className)
+    .c-hero(class=`${className}`)
+        img.c-hero__image(src='assets/img/hero.png')
+        .c-hero__title Павел Мирошин
+        .c-hero__sub-title Личный сайт веб разработчика

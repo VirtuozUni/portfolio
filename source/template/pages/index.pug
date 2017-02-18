@@ -8,10 +8,7 @@ block content
     .l-auth-button Авторизоваться
     .l-welcome-box
       .l-welcome-box__content
-        .c-hero.c-hero_theme_dark
-          img.c-hero__image(src='assets/img/hero.png')
-          .c-hero__title Павел Мирошин
-          .c-hero__sub-title Личный сайт веб разработчика
+        +hero('c-hero_theme_dark')
         .c-socials.c-socials_welcome
           +socials([{icon:"vk",link:"http://vk.com"},
               {icon:"github",link:"http://github.com"},

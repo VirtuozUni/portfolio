@@ -1,0 +1,46 @@
+.l-background {
+  background-image: url('/assets/img/background.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+
+}
+.l-auth-button {
+  color:#fff;
+  position: absolute;
+  cursor: pointer;
+  right: 100px;
+  font-family: "Roboto Medium";
+  transition: .5s;
+  font-size: 16px;
+  top: 24px;
+  border: 1px solid #fff;
+  padding: 13px 28px;
+  border-radius: 4px;
+  &:hover {
+    background: #fff;
+    color: $main_color;
+  }
+}
+@import 'welcome-box';
+@import 'hero';
+@import 'socials';
+
+.c-button__link {
+  text-decoration: none;
+  padding:14px 31px;
+  color: inherit;
+}
+
+.l-copy {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: "Roboto Light";
+  font-size: 16px;
+}

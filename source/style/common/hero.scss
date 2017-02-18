@@ -3,6 +3,16 @@
   &_theme_dark {
     color: $h2_color;
   }
+  &_theme_light {
+    color: #fff;
+    .c-hero__title {
+      font-size: 35px;
+      margin-top: 7px;
+    }
+    .c-hero__sub-title {
+      margin-top: 5px;
+    }
+  }
   &__image {
     width: 140px;
     height: 140px;

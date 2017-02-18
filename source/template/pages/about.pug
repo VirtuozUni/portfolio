@@ -1,0 +1,20 @@
+extends ../_template
+include ../common/_mixins
+block variables
+  - var title = 'Портфолио Мирошина Павла::Обо мне'
+
+block content
+  .l-header
+    img.l-header__bg(src='/assets/img/header.png')
+    .l-header__color-filter
+    svg.l-header__portfolio
+      use(xlink:href='assets/img/sprite.svg#portfolio_header')
+    .c-socials.c-socials_header
+      +socials([{icon: "vk", link: "http://vk.com"},
+          {icon: "github", link: "http://github.com"},
+          {icon: "in", link: "http://linked.in"}
+      ])
+    svg.c-header__menu
+      use(xlink:href='assets/img/sprite.svg#hamburger')
+    .l-header__hero
+      +hero('c-hero_theme_light')
