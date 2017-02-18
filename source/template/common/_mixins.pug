@@ -12,3 +12,8 @@ mixin hero(className)
         img.c-hero__image(src='assets/img/hero.png')
         .c-hero__title Павел Мирошин
         .c-hero__sub-title Личный сайт веб разработчика
+mixin skill(proc,name)
+    svg.skill-circle(width='110', height='110')
+        circle.skill-circle__first(r='45', cx='50%', cy='50%', fill='none')
+        circle.skill-circle__second(class=`circle-${proc}` r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+    .c-skill__name=name

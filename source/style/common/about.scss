@@ -2,11 +2,13 @@
 .l-content {
   position: relative;
   width: 100%;
-  &__half-block {
+  display: table;
+  .c-half-block {
     width: 50%;
-    float:left;
+    display: table-cell;
+    padding-bottom: 22px;
     background: #eeebdf;
-    .c-half-block__triangle {
+    &__triangle {
       height: 105px;
       width: 100%;
       position: relative;
@@ -14,13 +16,26 @@
       margin-bottom: -90px;
       fill: #eeebdf;
     }
-    &.c-half-block_left {
+    &_left {
       background: #efeee9;
       .c-half-block__triangle {
         fill: #efeee9;
       }
+      .c-half-block__subtitle {
+        margin-top:7px;
+        margin-left: -5px;
+        &:before {
+          left:-57px!important;
+        }
+        &:after {
+          right:-57px!important;
+        }
+      }
+      .c-half-block__description {
+        margin: 34px 100px 0px 80px;
+      }
     }
-    .c-half-block__title-bg {
+    &__title-bg {
       height: 125px;
       width:100%;
       fill: #6d7070;
@@ -29,14 +44,106 @@
       top: -132px;
       margin-bottom: -125px;
     }
-    .c-half-block__title {
+    &__title {
       text-align: center;
       display: inline-block;
       font-size: 63px;
       margin-top: -13px;
-      width: 100%;
+      position: relative;
+      color:$h1_color;
+      @include centeredX();
       font-family: "BERNIER Regular";
+      &:before, &:after{
+        content:"";
+        display: inline-block;
+        width: 22px;
+        height: 5px;
+        background: #373e42;
+        opacity:.2;
+        position: relative;
+        top:-21px;
+      }
+      &:before {
+        left:-30px;
+      }
+      &:after {
+        right:-30px;
+      }
+    }
+    &__pic {
+      background-image: url('/assets/img/hero.png');
+      background-size: cover;
+      position: relative;
+      @include centeredX();
+      width: 444px;
+      height: 444px;
+    }
+    &__subtitle {
+      text-align: center;
+      display: inline-block;
+      font-size: 35.1px;
+      color:$h2_color;
+      max-width: 220px;
+      margin-top:-5px;
+      position: relative;
+      @include centeredX();
+      font-family: "BERNIER Regular";
+      &:before, &:after{
+        content:"";
+        display: inline-block;
+        width: 22px;
+        height: 5px;
+        background: #373e42;
+        opacity:.2;
+        position: absolute;
+        top: 22px;
+      }
+      &:before {
+        left:-42px;
+      }
+      &:after {
+        right:-40px;
+      }
 
     }
+    &__description{
+      margin-top: 33px;
+      font-family: "Roboto Regular";
+      line-height: 1.5;
+      color: $h2_color;
+      padding-left: 39px;
+      padding-right: 22px;
+      p {
+        margin-top: -5px;
+      }
+    }
+    &__h3 {
+      font-family: "Roboto Medium";
+      font-size: 28px;
+      font-weight: 100;
+      padding-left: 39px;
+      padding-right: 22px;
+      color: $h2_color;
+      margin-top: 31px;
+      margin-bottom: 10px;
+      &_mtop {
+        margin-top: 47px;
+      }
+    }
+    &__skills{
+      list-style:none;
+      padding-left: 39px;
+      padding-right: 5px;
+      .c-skills__skill {
+        display: inline-block;
+        margin-right: 33px;
+        position: relative;
+        text-align: center;
+        &:last-child {
+          margin-right:0px;
+        }
+      }
+    }
+
   }
 }
