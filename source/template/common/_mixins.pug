@@ -1,0 +1,9 @@
+mixin menuItem(className,items)
+    each item in items
+        li(class=`${className}`)
+            a.c-button__link(href=`${item['link']}`)= item.title
+mixin socials(items)
+    each item in items
+        a.c-socials__social-icon(href=`${item['link']}` target="_blank")
+            svg.c-social-icon__svg
+                use(xlink:href=`assets/img/sprite.svg#${item['icon']}`)

@@ -1,0 +1,16 @@
+.c-socials {
+  text-align: center;
+  width: 100%;
+  &__social-icon {
+    text-decoration: none;
+    .c-social-icon__svg {
+      width: 31px;
+      fill: $main_color;
+      opacity: 0.5;
+      height: 22px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,5 +1,72 @@
-body {
-  margin: 0;
+$main_color: #00bfa5;
+$hover_main_color: #009688;
+$h1_color: #373e42;
+$h2_color: #455a64;
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url('/assets/fonts/Roboto-Medium.ttf');
 }
 
-@import 'common/greating';
+@font-face {
+  font-family: "Roboto Regular";
+  src: url('/assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url('/assets/fonts/Roboto-Light.ttf');
+}
+
+
+body,html {
+  margin: 0;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.l-background {
+  background-image: url('/assets/img/background.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+
+}
+.l-auth-button {
+  color:#fff;
+  position: absolute;
+  cursor: pointer;
+  right: 100px;
+  font-family: "Roboto Medium";
+  transition: .5s;
+  font-size: 16px;
+  top: 24px;
+  border: 1px solid #fff;
+  padding: 13px 28px;
+  border-radius: 4px;
+  &:hover {
+    background: #fff;
+    color: $main_color;
+  }
+}
+@import 'common/welcome-box';
+@import 'common/hero';
+@import 'common/socials';
+
+.c-button__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.l-copy {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: "Roboto Light";
+  font-size: 16px;
+}

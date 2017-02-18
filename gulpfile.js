@@ -12,12 +12,10 @@ global.$ = {
   gulp: require('gulp'),
   del: require('del'),
   spritesmith: require('gulp.spritesmith'),
-  tinify: require("tinify"),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
 
-tinify.key = "Qt0rYOPqMmad983gXtwnOEhNrMCaFELA";
 $.path.task.forEach(function(taskPath) {
   require(taskPath)();
 });

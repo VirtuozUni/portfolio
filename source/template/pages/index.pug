@@ -1,7 +1,25 @@
 extends ../_template
-
+include ../common/_mixins
 block variables
-  - var title = 'Home page'
+  - var title = 'Портфолио Мирошина Павла'
 
 block content
-  include ../common/_greating
+  .l-background
+    .l-auth-button Авторизоваться
+    .l-welcome-box
+      .l-welcome-box__content
+        .c-hero.c-hero_theme_dark
+          img.c-hero__image(src='assets/img/hero.png')
+          .c-hero__title Павел Мирошин
+          .c-hero__sub-title Личный сайт веб разработчика
+        .c-socials.c-socials_welcome
+          +socials([{icon:"vk",link:"http://vk.com"},
+              {icon:"github",link:"http://github.com"},
+              {icon:"in",link:"http://linked.in"}
+          ])
+      ul.l-welcome-box__welcome-buttons
+        +menuItem('l-welcome-buttons__button',[{title: "Мои работы", link: "works.html"}, {
+            title: 'Обо мне',
+            link: 'about.html'
+        }, {title: 'Блог', link: 'blog.html'}])
+    .l-copy © Павел Мирошин | создано с любовью в LoftSchool | 2017

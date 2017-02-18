@@ -11,6 +11,8 @@ module.exports = function() {
     });
     $.gulp.task('copy:image', function() {
         return $.gulp.src('./source/images/**/*.*', { since: $.gulp.lastRun('copy:image') })
+           // .pipe($.gp.imagemin())
+            .pipe($.gp.tinypng('Qt0rYOPqMmad983gXtwnOEhNrMCaFELA'))
             .pipe($.gulp.dest($.config.root + '/assets/img'));
     });
     $.gulp.task('copy',
