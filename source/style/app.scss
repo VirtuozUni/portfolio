@@ -9,6 +9,15 @@ $h2_color: #455a64;
   transform: translate(-50%, -50%);
 }
 
+@mixin centeredX() {
+  left: 50%;
+  transform: translate(-50%);
+}
+@mixin centeredY() {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @font-face {
   font-family: "Roboto Medium";
   src: url('/assets/fonts/Roboto-Medium.ttf');
@@ -21,6 +30,11 @@ $h2_color: #455a64;
 @font-face {
   font-family: "Roboto Light";
   src: url('/assets/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: "BERNIER Regular";
+  src: url('/assets/fonts/BERNIERRegular-Regular.otf');
 }
 
 

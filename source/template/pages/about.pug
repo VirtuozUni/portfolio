@@ -4,17 +4,32 @@ block variables
   - var title = 'Портфолио Мирошина Павла::Обо мне'
 
 block content
-  .l-header
-    img.l-header__bg(src='/assets/img/header.png')
-    .l-header__color-filter
-    svg.l-header__portfolio
-      use(xlink:href='assets/img/sprite.svg#portfolio_header')
-    .c-socials.c-socials_header
-      +socials([{icon: "vk", link: "http://vk.com"},
-          {icon: "github", link: "http://github.com"},
-          {icon: "in", link: "http://linked.in"}
-      ])
-    svg.c-header__menu
-      use(xlink:href='assets/img/sprite.svg#hamburger')
-    .l-header__hero
-      +hero('c-hero_theme_light')
+  .wrapper
+    .l-header
+      img.l-header__bg(src='/assets/img/header.png')
+      .l-header__color-filter
+      svg.l-header__portfolio
+        use(xlink:href='assets/img/sprite.svg#portfolio_header')
+      .c-socials.c-socials_header
+        +socials([{icon: "vk", link: "http://vk.com"},
+            {icon: "github", link: "http://github.com"},
+            {icon: "in", link: "http://linked.in"}
+        ])
+      svg.c-header__menu
+        use(xlink:href='assets/img/sprite.svg#hamburger')
+      .l-header__hero
+        +hero('c-hero_theme_light')
+      svg.l-header__arrow
+        use(xlink:href='assets/img/sprite.svg#portf_arrow_down')
+    .l-content
+      .l-content__half-block.c-half-block_left
+        svg(viewBox="0 0 1000 100" preserveAspectRatio="none").c-half-block__triangle
+          polygon(points="0,0 0,100 1000,100")
+        .c-half-block__title Обо мне
+        svg.c-half-block__title-bg
+          use(xlink:href='assets/img/sprite.svg#about_header')
+
+
+      .l-content__half-block
+        svg(viewBox="0 0 1000 100" preserveAspectRatio="none").c-half-block__triangle
+          polygon(points="1000,0 1000,100 0,100")

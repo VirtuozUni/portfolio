@@ -1,47 +1,42 @@
-$header_h: 600px;
-.l-header {
-  width: 100%;
-  height:$header_h;
+@import 'header';
+.l-content {
   position: relative;
-  &__bg {
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-  }
-  &__color-filter {
-    width: 100%;
-    position: absolute;
-    height: $header_h;
-    opacity: .3;
-    background: #016672;
-    top: 0px;
-    left: 0px;
-  }
-  &__portfolio {
-    width: 100%;
-    height: $header_h;
-    opacity: .06;
-    fill: #fff;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-  }
-  .c-socials_header {
-    position: absolute;
-    left: 10px;
-    top: 30px;
-  }
-  .c-header__menu {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    width: 40px;
-    height: 35px;
-    fill: #fff;
-  }
-  &__hero {
-    position: absolute;
-    @include centered()
+  width: 100%;
+  &__half-block {
+    width: 50%;
+    float:left;
+    background: #eeebdf;
+    .c-half-block__triangle {
+      height: 105px;
+      width: 100%;
+      position: relative;
+      top: -105px;
+      margin-bottom: -90px;
+      fill: #eeebdf;
+    }
+    &.c-half-block_left {
+      background: #efeee9;
+      .c-half-block__triangle {
+        fill: #efeee9;
+      }
+    }
+    .c-half-block__title-bg {
+      height: 125px;
+      width:100%;
+      fill: #6d7070;
+      opacity: .07;
+      position: relative;
+      top: -132px;
+      margin-bottom: -125px;
+    }
+    .c-half-block__title {
+      text-align: center;
+      display: inline-block;
+      font-size: 63px;
+      margin-top: -13px;
+      width: 100%;
+      font-family: "BERNIER Regular";
+
+    }
   }
 }

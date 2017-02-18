@@ -38,8 +38,7 @@
 .l-copy {
   position: absolute;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  @include centeredX();
   color: #fff;
   font-family: "Roboto Light";
   font-size: 16px;
