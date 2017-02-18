@@ -1,0 +1,84 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-browser {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -32px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-contract {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -64px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-email {
+  background-image: url(../../../../../../sprite.png);
+  background-position: 0px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-image {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -32px -32px;
+  width: 32px;
+  height: 32px;
+}
+.icon-megaphone {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -64px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-placeholder {
+  background-image: url(../../../../../../sprite.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-responsive {
+  background-image: url(../../../../../../sprite.png);
+  background-position: 0px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-settings {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -32px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-smartphone {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -64px -64px;
+  width: 32px;
+  height: 32px;
+}
+.icon-startup {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -96px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-telemarketer {
+  background-image: url(../../../../../../sprite.png);
+  background-position: -96px -32px;
+  width: 32px;
+  height: 32px;
+}
