@@ -17,10 +17,10 @@
     }
     &_left {
       background: #efeee9;
-      .c-half-block__triangle {
+      & .c-half-block__triangle {
         fill: #efeee9;
       }
-      .c-half-block__subtitle {
+      & .c-subtitle {
         margin-top:7px;
         margin-left: -5px;
         &:before {
@@ -30,7 +30,7 @@
           right:-57px!important;
         }
       }
-      .c-half-block__description {
+      & .c-half-block__description {
         margin: 34px 100px 0px 80px;
       }
     }

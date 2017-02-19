@@ -40,7 +40,7 @@
   color: #fff;
   font-family: "Roboto Light";
   font-size: 16px;
-  .c-copy_welcome-copy {
+  &.c-copy_welcome-copy {
     bottom: 10px;
     @include centeredX();
   }
