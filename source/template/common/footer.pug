@@ -1,0 +1,19 @@
+footer.footer
+    .footer__top
+        ul.c-nav
+            +menuItem('c-nav__item','c-nav__link',[{title: "Мои работы", link: "works.html"}, {
+                title: 'Обо мне',
+                link: 'about.html'
+            }, {title: 'Блог', link: 'blog.html'},
+                {
+                    title: 'Авторизация',
+                    link: '#'}])
+
+        .footer__socials
+            +socials([{icon: "vk", link: "http://vk.com"},
+                {icon: "github", link: "http://github.com"},
+                {icon: "in", link: "http://linked.in"}
+            ])
+    .footer__bottom
+        .c-bottom__description Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        .c-copy.c-copy_footer © Павел Мирошин | создано с любовью в LoftSchool | 2017

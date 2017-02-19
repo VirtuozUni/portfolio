@@ -1,7 +1,7 @@
-mixin menuItem(className,items)
+mixin menuItem(className,itemClass,items)
     each item in items
         li(class=`${className}`)
-            a.c-button__link(href=`${item['link']}`)= item.title
+            a(class=`${itemClass}` href=`${item['link']}`)= item.title
 mixin socials(items)
     each item in items
         a.c-socials__social-icon(href=`${item['link']}` target="_blank")
@@ -17,3 +17,9 @@ mixin skill(proc,name)
         circle.skill-circle__first(r='45', cx='50%', cy='50%', fill='none')
         circle.skill-circle__second(class=`circle-${proc}` r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
     .c-skill__name=name
+
+mixin contactList(icon,link,text)
+    li.c-contact-list__item
+        svg.c-item-icon
+            use(xlink:href=`assets/img/sprite.svg#${icon}`)
+        a(href=`${link}`, target='_blank').c-item-link=text

@@ -1,0 +1,86 @@
+.footer {
+  height: 147px;
+  width: 100%;
+  margin-top: -147px;
+  font-family: "Roboto Medium";
+  position: absolute;
+  background: rgba($h1_color,.85);
+  color:#fff;
+  &__top {
+    height: 74px;
+    margin-top: -16px;
+    position: relative;
+    border-bottom: 1px solid rgba(#fff,.1);
+  }
+  &__socials {
+    position: absolute;
+    right: 33px;
+    @include centeredY();
+    .c-socials__social-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 17px;
+      border:1px solid rgba(#fff,.5);
+      margin-left:10px;
+      display: inline-block;
+      position: relative;
+      &:hover {
+
+        background: #fff;
+        .c-social-icon__svg {
+          opacity: 1;
+          fill:rgba($h1_color,.85);
+        }
+      }
+      .c-social-icon__svg {
+        width: 22px;
+        height: 20px;
+        fill: #fff;
+        position: absolute;
+        @include centered();
+      }
+    }
+
+  }
+  &__bottom {
+    position: relative;
+    height: 74px;
+  }
+}
+
+.c-nav {
+  list-style:none;
+  margin-left: -30px;
+  &__item {
+    display: block;
+    float:left;
+    padding: 28px 20px;
+  }
+  &__link {
+    color:#fff;
+    font-size: 15.98;
+    text-decoration: none;
+    transition: .5s;
+    &:hover {
+      color: $main_color;
+    }
+  }
+}
+
+
+
+.c-bottom__description {
+  left: 30px;
+  position: absolute;
+  color: #fff;
+  font-family: "Roboto Light";
+  font-size: 16px;
+  max-width: 560px;
+  @include centeredY();
+  opacity: .5;
+}
+.c-copy_footer {
+  right: 30px;
+  @include centeredY();
+  opacity: .5;
+}

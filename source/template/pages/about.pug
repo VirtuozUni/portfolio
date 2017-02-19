@@ -29,7 +29,7 @@ block content
         svg.c-half-block__title-bg
           use(xlink:href='assets/img/sprite.svg#about_header')
         .c-half-block__pic
-        .c-half-block__subtitle Кто я
+        .c-subtitle Кто я
         .c-half-block__description
           p Я веб разработчик из Москвы. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
           p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
@@ -37,7 +37,7 @@ block content
       .c-half-block
         svg(viewBox="0 0 1000 100" preserveAspectRatio="none").c-half-block__triangle
           polygon(points="1000,0 1000,100 0,100")
-        .c-half-block__subtitle Чем я могу быть вам полезен
+        .c-subtitle Чем я могу быть вам полезен
         .c-half-block__description
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         h2.c-half-block__h3.c-half-block__h3_mtop Frontend
@@ -66,3 +66,14 @@ block content
             +skill(65,'Gulp')
           li.c-skills__skill
             +skill(40,'Bower')
+    .l-map
+      svg.l-map__point
+        use(xlink:href='assets/img/sprite.svg#map_marker')
+      .c-contacts
+        .c-subtitle Контакты
+        ul.c-contacts__contact-list
+          +contactList('skype','skype:virtuoz2142','virtuoz2142')
+          +contactList('envelope','mailto:mps@retailasp.ru','mps@retailasp.ru')
+          +contactList('phone','tel:+78005553535','8 800 555 35 35')
+          +contactList('map_marker','https://yandex.ru/maps/?text=г.Новосибирск%2C%20ул.%20Инская%2C%20д.%205','г.Новосибирск, ул. Инская, д. 5')
+  include ../common/footer
