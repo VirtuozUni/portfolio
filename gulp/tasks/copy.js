@@ -11,13 +11,17 @@ module.exports = function() {
     });
     $.gulp.task('copy:image', function() {
         return $.gulp.src('./source/images/**/*.*', { since: $.gulp.lastRun('copy:image') })
-           // .pipe($.gp.imagemin())
             .pipe($.gp.tinypng('Qt0rYOPqMmad983gXtwnOEhNrMCaFELA'))
             .pipe($.gulp.dest($.config.root + '/assets/img'));
+    });
+    $.gulp.task('copy:awersome.css', function() {
+        return $.gulp.src('./source/style/fontAwesome.css')
+            .pipe($.gulp.dest($.config.root + '/assets/css'));
     });
     $.gulp.task('copy',
         $.gulp.parallel(
             'copy:fonts',
-            'copy:image'
+            'copy:image',
+            'copy:awersome.css'
         ));
 };

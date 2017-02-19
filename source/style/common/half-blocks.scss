@@ -1,12 +1,82 @@
+.c-full-block {
+  width: 100%;
+  position: relative;
+  &__triangle {
+    height: 287px;
+    width: 100%;
+    position: relative;
+    top: -105px;
+    margin-bottom: -186px;
+    fill: #faf8f0;
+  }
+  .c-title-bg {
+    top: -167px;
+  }
+  .c-title {
+    top: -35px;
+  }
+}
+.c-title-bg {
+  height: 125px;
+  width:100%;
+  fill: #6d7070;
+  opacity: .07;
+  position: relative;
+  top: -132px;
+  margin-bottom: -125px;
+}
+.c-title {
+  text-align: center;
+  display: inline-block;
+  font-size: 63px;
+  margin-top: -13px;
+  position: relative;
+  color:$h1_color;
+  @include centeredX();
+  font-family: "BERNIER Regular";
+  &:before, &:after{
+    content:"";
+    display: inline-block;
+    width: 22px;
+    height: 5px;
+    background: #373e42;
+    opacity:.2;
+    position: absolute;
+    top: 34px;
+  }
+  &:before {
+    left:-30px;
+  }
+  &:after {
+    right:-30px;
+  }
+}
+
 .l-content {
   position: relative;
   width: 100%;
-  display: table;
+  display: flex;
   .c-half-block {
     width: 50%;
-    display: table-cell;
     padding-bottom: 22px;
     background: #eeebdf;
+    .c-accent-title {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+    &__button-place {
+      width: 100%;
+      position: relative;
+      height: 45px;
+      padding-top: 8px;
+    }
+    .c-button {
+      position: absolute;
+      @include centeredX();
+    }
+    &_mbottom {
+      padding-bottom: 0px!important;
+    }
     &__triangle {
       height: 105px;
       width: 100%;
@@ -32,41 +102,6 @@
       }
       & .c-half-block__description {
         margin: 34px 100px 0px 80px;
-      }
-    }
-    &__title-bg {
-      height: 125px;
-      width:100%;
-      fill: #6d7070;
-      opacity: .07;
-      position: relative;
-      top: -132px;
-      margin-bottom: -125px;
-    }
-    &__title {
-      text-align: center;
-      display: inline-block;
-      font-size: 63px;
-      margin-top: -13px;
-      position: relative;
-      color:$h1_color;
-      @include centeredX();
-      font-family: "BERNIER Regular";
-      &:before, &:after{
-        content:"";
-        display: inline-block;
-        width: 22px;
-        height: 5px;
-        background: #373e42;
-        opacity:.2;
-        position: relative;
-        top:-21px;
-      }
-      &:before {
-        left:-30px;
-      }
-      &:after {
-        right:-30px;
       }
     }
     &__pic {

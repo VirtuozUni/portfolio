@@ -31,6 +31,11 @@ $h2_color: #455a64;
   font-family: "Roboto Light";
   src: url('/assets/fonts/Roboto-Light.ttf');
 }
+@font-face {
+  font-family: "Roboto Bold";
+  src: url('/assets/fonts/Roboto-Bold.ttf');
+}
+
 
 @font-face {
   font-family: "BERNIER Regular";
@@ -46,8 +51,38 @@ body,html {
   box-sizing: border-box;
 }
 
+a {
+  color: #6ba0bf;
+  font-family: "Roboto Medium";
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.c-button {
+  border-radius: 4px;
+  background: $main_color;
+  color: #fff;
+  padding: 13px 21px;
+  font-family: "Roboto Medium";
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  .fa {
+    margin-right: 10px;
+    top: 2px;
+    position: relative;
+    font-size: 20px;
+  }
+  &:hover {
+    background-color: $hover_main_color;
+  }
+}
+
 @import 'common/welcome';
 @import 'common/about';
 @import 'common/skills';
 @import 'common/contacts';
 @import 'common/footer';
+@import 'common/works';
+@import 'common/slider';

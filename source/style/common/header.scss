@@ -51,9 +51,16 @@ $header_h: 600px;
   &__arrow {
     position: absolute;
     width: 26px;
-    bottom: 4px;
+    height: 26px;
+    bottom: 66px;
     opacity: .7;
     fill: #fff;
+    transition: .5s;
+    z-index: 99;
+    cursor: pointer;
     @include centeredX();
+    &:hover {
+      opacity: 1;
+    }
   }
 }

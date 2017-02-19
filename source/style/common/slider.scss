@@ -1,0 +1,46 @@
+.c-slider-main-image {
+  max-height: 320px;
+  max-width: 100%;
+  margin: 102px 0px;
+  position: relative;
+  @include centeredX();
+}
+.c-slider-buttons {
+  display: flex;
+  width: 100%;
+  height: 225px;
+  &__left{
+    border-right:1px solid #cac8c4;
+  }
+  &__left,&__right{
+    width:50%;
+    display: inline-block;
+    height: 225px;
+    cursor:pointer;
+    position: relative;
+    //background: #b6b4ae;
+    .l-left__bg, .l-right__bg {
+      background: #b6b4ae;
+      opacity: .7;
+      transition: .5s;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        opacity: .8;
+      }
+    }
+    .l-left__preview, .l-right__preview{
+      max-height: 214px;
+      max-width: 100%;
+      position: absolute;
+      @include centered();
+    }
+    .l-left__arrow, .l-right__arrow {
+      width: 43px;
+      height: 27px;
+      fill: #fff;
+      position: absolute;
+      @include centered();
+    }
+  }
+}

@@ -1,0 +1,92 @@
+extends ../_template
+include ../common/_mixins
+
+block variables
+  - var title = 'Портфолио Мирошина Павла::Мои работы'
+
+block content
+  .wrapper
+    .l-header
+      .l-header__bg
+      .l-header__color-filter
+      svg.l-header__portfolio
+        use(xlink:href='assets/img/sprite.svg#portfolio_header')
+      .c-socials.c-socials_header
+        +socials([{icon: "vk", link: "http://vk.com"},
+            {icon: "github", link: "http://github.com"},
+            {icon: "in", link: "http://linked.in"}
+        ])
+      svg.c-header__menu
+        use(xlink:href='assets/img/sprite.svg#hamburger')
+      .l-header__hero
+        +hero('c-hero_theme_light')
+      svg.l-header__arrow
+        use(xlink:href='assets/img/sprite.svg#portf_arrow_down')
+    .c-full-block
+      svg(viewBox="0 0 1000 287" preserveAspectRatio="none").c-full-block__triangle
+        polygon(points="0,0 0,287 1000,287 1000,0 500,105")
+
+      .c-title Мои работы
+      svg.c-title-bg
+        use(xlink:href='assets/img/sprite.svg#works_header')
+    .l-content
+      .c-half-block.c-half-block_left
+        .c-valign
+          .c-subtitle(style="max-width: 267px;") Сайт школы онлайн образования
+          .c-accent-title HTML, CSS, JAVASCRIPT
+          .c-half-block__button-place
+            a.c-button
+              i.fa.fa-link(aria-hidden='true')
+              | Посмотреть сайт
+      .c-half-block.c-half-block_mbottom
+        img.c-slider-main-image(src='/assets/img/slider/work-1.png')
+        .c-slider-buttons
+          .c-slider-buttons__left
+            img.l-left__preview
+            .l-left__bg
+            svg.l-left__arrow
+              use(xlink:href='assets/img/sprite.svg#portf_arrow_down')
+          .c-slider-buttons__right
+            img.l-right__preview
+            .l-right__bg
+            svg.l-right__arrow
+              use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
+    .l-callback
+      .c-title что обо мне говорят
+      svg.c-title-bg
+        use(xlink:href='assets/img/sprite.svg#about_header')
+      .c-feedback
+        .c-galign
+          .c-feedback__feedback-block
+            i.fa.fa-quote-left(aria-hidden='true')
+            .c-feedback-block__text
+              |Этот парень проходил обучение веб-разработке не где-то,
+              |а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .c-feedback-block__autor
+              .c-autor__avatar(style="background-image:url('/assets/img/feedback_autor-1.png')")
+              .c-autor__name Ковальчук Дмитрий
+                .c-autor__position основатель Loftschool
+          .c-feedback__feedback-block
+            i.fa.fa-quote-left(aria-hidden='true')
+            .c-feedback-block__text
+              | Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .c-feedback-block__autor
+              .c-autor__avatar(style="background-image:url('/assets/img/feedback_autor-2.png')")
+              .c-autor__name Сабанцев Владимир
+                .c-autor__position преподаватель
+      .l-callback__callback-place
+        .c-subtitle Связаться со мной
+        input(type="text" placeholder="Имя").l-callback__name
+        input(type="text" placeholder="Email").l-callback__mail
+        textarea(placeholder="Ваше сообщение" rows="6").l-callback__message
+        ul.c-bottom-buttons
+          +menuItem('c-bottom-buttons__button','c-button__link',[{title: "Отправить", link: "#"}, {
+              title: 'Очистить',
+              link: '#'}])
+      svg.l-header__arrow
+        use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
+
+
+
+  include ../common/footer
+  script(src='/assets/js/app.js' defer)
