@@ -8,9 +8,4 @@ LOFTSCHOOL
 Использован макет `Mountains`
 ***
 Список изменений:
-* Изменен таск sprite:svg
-* Добавлен таск sprite:svg-style ( генерация стилей для sprite:svg)
-* Добавлен таск copy:fonts (копирование шрифтов)
-* Добавлен таск copy (включает в себя выполнение тасков copy:image и copy:fonts)
-* Добавлен таск sprite (генерация спрайта из png файлов)
-* Изменен таск css.foundation.js (добавлен файл для слияния sprite.css - стили из таска sprite)
+* Сверстаны страницы: "Welcome", "About", "Works"
