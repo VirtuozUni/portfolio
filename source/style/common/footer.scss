@@ -43,8 +43,11 @@
 
   }
   &__bottom {
-    position: relative;
     height: 74px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
   }
 }
 
@@ -70,17 +73,15 @@
 
 
 .c-bottom__description {
-  left: 30px;
-  position: absolute;
+  margin-left: 30px;
   color: #fff;
   font-family: "Roboto Light";
   font-size: 16px;
   max-width: 560px;
-  @include centeredY();
   opacity: .5;
 }
 .c-copy_footer {
-  right: 30px;
-  @include centeredY();
+  margin-left: auto;
+  margin-right: 30px;
   opacity: .5;
 }

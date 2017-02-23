@@ -5,43 +5,52 @@
   background-size: cover;
   min-width: 100%;
   min-height: 100%;
-  display: block;
-
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
 }
-.l-auth-button {
-  color:#fff;
-  position: absolute;
-  cursor: pointer;
-  right: 100px;
-  font-family: "Roboto Medium";
-  transition: .5s;
-  font-size: 16px;
-  top: 24px;
-  border: 1px solid #fff;
-  padding: 13px 28px;
-  border-radius: 4px;
-  &:hover {
-    background: #fff;
-    color: $main_color;
+.l-auth-block {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  &__button {
+    color:#fff;
+    //position: absolute;
+    cursor: pointer;
+    margin-right: 100px;
+    font-family: "Roboto Medium";
+    transition: .5s;
+    font-size: 16px;
+    margin-top: 24px;
+    border: 1px solid #fff;
+    padding: 13px 28px;
+    border-radius: 4px;
+    &:hover {
+      background: #fff;
+      color: $main_color;
+    }
   }
 }
+
 @import 'welcome-box';
 @import 'hero';
 @import 'socials';
 
 .c-button__link {
   text-decoration: none;
-  padding:14px 31px;
+  padding:0px 30px;
   color: inherit;
 }
 
 .c-copy {
-  position: absolute;
+  //position: absolute;
+
   color: #fff;
   font-family: "Roboto Light";
   font-size: 16px;
   &.c-copy_welcome-copy {
-    bottom: 10px;
-    @include centeredX();
+    margin-bottom: 10px;
+    margin-top: auto;
+    text-align: center;
   }
 }
