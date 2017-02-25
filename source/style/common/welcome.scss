@@ -1,13 +1,28 @@
-.l-background {
-  background-image: url('/assets/img/background.png');
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: cover;
+.wrapper.wrapper_welcome {
   min-width: 100%;
   min-height: 100%;
   display: flex;
+  position: absolute;
   align-items: center;
   flex-flow: column wrap;
+}
+.l-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
+  .parallax_layer {
+    position: absolute;
+    img {
+      width: 110%;
+    }
+    height: 100%;
+    bottom:0px;
+    left: 0px;
+
+  }
 }
 .l-auth-block {
   display: flex;
@@ -43,8 +58,6 @@
 }
 
 .c-copy {
-  //position: absolute;
-
   color: #fff;
   font-family: "Roboto Light";
   font-size: 16px;

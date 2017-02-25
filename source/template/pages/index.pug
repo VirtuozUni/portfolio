@@ -2,9 +2,31 @@ extends ../_template
 include ../common/_mixins
 block variables
   - var title = 'Портфолио Мирошина Павла'
+  - var script = 'parallax();'
 
 block content
-  .l-background
+  .l-background#parallax
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-1.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-2.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-3.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-4.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-5.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-6.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-7.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-8.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-9.png')
+    .parallax_layer
+      img(src='./assets/img/parallax/parallax-10.png')
+  .wrapper.wrapper_welcome
     .l-auth-block
       .l-auth-block__button Авторизоваться
     .l-welcome-box
