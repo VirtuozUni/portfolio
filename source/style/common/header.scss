@@ -3,6 +3,7 @@ $header_h: 600px;
   width: 100%;
   height:$header_h;
   position: relative;
+  overflow: hidden;
   &__bg {
     width: 100%;
     height: 1325px;

@@ -49,11 +49,11 @@ body,html {
 }
 * {
   box-sizing: border-box;
+  font-family: "Roboto Regular";
 }
 
 a {
   color: #6ba0bf;
-  font-family: "Roboto Medium";
   &:hover {
     text-decoration: none;
   }
@@ -78,7 +78,11 @@ a {
     background-color: $hover_main_color;
   }
 }
-
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+}
+@import 'common/prettify';
 @import 'common/welcome';
 @import 'common/about';
 @import 'common/skills';
@@ -86,3 +90,4 @@ a {
 @import 'common/footer';
 @import 'common/works';
 @import 'common/slider';
+@import 'common/blog';

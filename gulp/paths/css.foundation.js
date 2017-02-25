@@ -2,5 +2,5 @@
 
 module.exports = [
   './node_modules/normalize.css/normalize.css',
-    './source/style/sprite.css'
+  './source/style/sprite.css'
 ];
