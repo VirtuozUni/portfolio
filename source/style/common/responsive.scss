@@ -1,0 +1,133 @@
+@media (max-width: 768px) {
+  .c-copy.c-copy_welcome-copy {
+    margin-bottom: 2rem;
+  }
+  .l-auth-block__button{
+    margin-right: 1.5rem;
+  }
+  .l-header {
+    height: 508px;
+    &__arrow {
+      bottom: 48px;
+    }
+  }
+  .l-content {
+    flex-direction: column;
+    .c-half-block {
+      width: 100%;
+      &__triangle {
+        fill:#efeee9;
+        position: absolute;
+        width: 50%;
+        height: 68px;
+        margin-bottom: -68px;
+        top: -68px;
+        right: 0px;
+      }
+      &__pic {
+        width: 471px;
+      }
+      .c-subtitle {
+        margin-top: 39px;
+        margin-left: 0;
+        font-size: 30px;
+        &:before,&:after {
+          top: calc(50% - 2px);
+        }
+        &:before {
+          left: -43px!important;
+        }
+        &:after{
+          right: -43px!important;
+        }
+      }
+
+    }
+    .c-half-block_left .c-half-block__triangle {
+      left: 0px;
+    }
+
+
+    .c-title {
+      margin-top: 35px;
+      font-size: 50px;
+      &:before,&:after {
+        top: calc(50% - 2px);
+      }
+      &:before {
+        left: -43px!important;
+      }
+      &:after{
+        right: -43px!important;
+      }
+
+    }
+    .c-half-block__description {
+      margin: 12px 106px 0px 106px!important;
+    }
+
+    .c-half-block__h3 {
+      font-size: 1.3rem;
+      margin-top: 38px;
+      text-align: center;
+      padding-left: 106px;
+      padding-right: 106px;
+      margin-bottom: 0.625rem;
+    }
+    .c-half-block__h3_mtop {
+      margin-top: 29px!important;
+    }
+    .c-half-block__skills {
+      justify-content: center;
+      padding-left: 106px;
+      padding-right: 106px;
+    }
+  }
+  .l-map {
+    height: 805px;
+    .c-contacts {
+      top: calc(50% - 106px);
+    }
+  }
+
+  .footer {
+    height: 212px;
+    margin-top: -212px;
+    &__top {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      height: 119px;
+    }
+    &__socials {
+      margin: 0px;
+      margin-bottom: 15px;
+    }
+    &__bottom {
+      justify-content: center;
+      height: initial;
+    }
+    .c-bottom__description {
+      margin: 17px 0;
+
+      text-align: center;
+    }
+    .c-copy_footer {
+      margin: 0px;
+      ext-align: center;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .l-auth-block {
+    align-self: center;
+    &__button {
+      margin-right: 0px;
+    }
+  }
+  .c-half-block__pic {
+    width: 100%!important;
+  }
+}

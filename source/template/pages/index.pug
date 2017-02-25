@@ -28,18 +28,45 @@ block content
       img(src='./assets/img/parallax/parallax-10.png')
   .wrapper.wrapper_welcome
     .l-auth-block
-      .l-auth-block__button Авторизоваться
+      .l-auth-block__button(onclick="$('.l-welcome-box').toggleClass('hover')") Авторизоваться
     .l-welcome-box
-      .l-welcome-box__content
-        +hero('c-hero_theme_dark',true)
-        .c-socials.c-socials_welcome
-          +socials([{icon:"vk",link:"http://vk.com"},
-              {icon:"github",link:"http://github.com"},
-              {icon:"in",link:"http://linked.in"}
-          ])
-      ul.l-welcome-box__welcome-buttons
-        +menuItem('l-welcome-buttons__button','c-button__link',[{title: "Мои работы", link: "works.html"}, {
-            title: 'Обо мне',
-            link: 'about.html'
-        }, {title: 'Блог', link: 'blog.html'}])
+      .flipper
+        .c-side-content.front
+          .c-side-content__content
+            +hero('c-hero_theme_dark',true)
+            .c-socials.c-socials_welcome
+              +socials([{icon:"vk",link:"http://vk.com"},
+                  {icon:"github",link:"http://github.com"},
+                  {icon:"in",link:"http://linked.in"}
+              ])
+          ul.c-side-content__welcome-buttons
+            +menuItem('l-welcome-buttons__button','c-button__link',[{title: "Мои работы", link: "works.html"}, {
+                title: 'Обо мне',
+                link: 'about.html'
+            }, {title: 'Блог', link: 'blog.html'}])
+        .c-side-content.back
+          .c-side-content__content
+            .c-subtitle Авторизуйтесь
+            p.c-centered-col
+              label.input-icon(for='login')
+                i.fa.fa-user(aria-hidden='true')
+              input#login.input-w-icon(type='text' placeholder="Логин")
+            p.c-centered-col
+              label.input-icon(for='password')
+                i.fa.fa-key(aria-hidden='true')
+              input#password.input-w-icon(type='password' placeholder="Пароль")
+            p.c-centered-col
+              input#robot.c-checkbox(type='checkbox')
+              label.c-checkbox__label(for='robot') Я человек
+            p.c-centered-col Вы точно не робот?
+            .c-centered-col
+              input#robot-yes.c-checkbox(type='radio' value='1' name='not_robot')
+              label.c-checkbox__label(for='robot-yes') Да
+              input#robot-not.c-checkbox(type='radio' value='0' name='not_robot')
+              label.c-checkbox__label(for='robot-not') Не уверен
+          ul.c-side-content__welcome-buttons
+            +menuItem('l-welcome-buttons__button','c-button__link',[{title: "На главную", link: "index.html"}, {
+                title: 'Войти',
+                link: 'login.html'
+            }])
     .c-copy.c-copy_welcome-copy © Павел Мирошин | создано с любовью в LoftSchool | 2017

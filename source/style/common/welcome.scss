@@ -15,8 +15,12 @@
   top: 0px;
   .parallax_layer {
     position: absolute;
+    width: 110%;
     img {
-      width: 110%;
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      @include centered();
     }
     height: 100%;
     bottom:0px;
@@ -27,7 +31,7 @@
 .l-auth-block {
   display: flex;
   align-self: flex-end;
-  justify-content: flex-end;
+  //justify-content: flex-end;
   &__button {
     color:#fff;
     //position: absolute;
@@ -53,7 +57,6 @@
 
 .c-button__link {
   text-decoration: none;
-  padding:0px 30px;
   color: inherit;
 }
 

@@ -46,6 +46,7 @@ $h2_color: #455a64;
 body,html {
   margin: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -91,3 +92,6 @@ a {
 @import 'common/works';
 @import 'common/slider';
 @import 'common/blog';
+@import 'common/checkbox';
+
+@import 'common/responsive';

@@ -4,18 +4,21 @@
   margin-top: -147px;
   font-family: "Roboto Medium";
   position: absolute;
+  display: flex;
+  flex-direction: column;
   background: rgba($h1_color,.85);
   color:#fff;
   &__top {
     height: 74px;
-    margin-top: -16px;
+    //margin-top: -16px;
     position: relative;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid rgba(#fff,.1);
   }
   &__socials {
-    position: absolute;
-    right: 33px;
-    @include centeredY();
+    margin-left: auto;
+    margin-right: 33px;
     .c-socials__social-icon {
       width: 36px;
       height: 36px;
@@ -53,10 +56,11 @@
 
 .c-nav {
   list-style:none;
+  margin: 0px;
   margin-left: -30px;
+  display: flex;
   &__item {
     display: block;
-    float:left;
     padding: 28px 20px;
   }
   &__link {

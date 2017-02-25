@@ -139,6 +139,7 @@
     }
     &__skills{
       list-style:none;
+      display: flex;
       padding-left: 39px;
       padding-right: 5px;
       .c-skills__skill {
