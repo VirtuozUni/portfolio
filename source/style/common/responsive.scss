@@ -12,7 +12,6 @@
     margin-right: 1.5rem;
   }
   .l-header {
-    height: 508px;
     &__arrow {
       bottom: 48px;
     }
@@ -325,6 +324,18 @@
       font-size: 13px;
       line-height: 1.5;
     }
+  }
+  .c-title .c-title_white {
+    font-size: 35px;
+  }
+  .c-title-bg .c-title-bg_white {
+    height: 90px;
+    top: -210px;
+  }
+  .c-blog-articles {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
   }
 
 

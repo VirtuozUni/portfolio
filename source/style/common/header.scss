@@ -1,12 +1,12 @@
 $header_h: 600px;
 .l-header {
   width: 100%;
-  height:$header_h;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   &__bg {
     width: 100%;
-    height: 1325px;
+    height: 100vh;
     background-image: url('/assets/img/header.png');
     position: absolute;
     background-position: center top;
@@ -17,7 +17,7 @@ $header_h: 600px;
   &__color-filter {
     width: 100%;
     position: absolute;
-    height: $header_h;
+    height: 100vh;
     opacity: .3;
     background: #016672;
     top: 0px;

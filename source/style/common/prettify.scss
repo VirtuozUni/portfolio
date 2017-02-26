@@ -52,9 +52,11 @@
 /* Put a border around prettyprinted code snippets. */
 pre.prettyprint {
     padding: 2px;
-    background-color: #e8e7e5;
+    overflow-x: auto;
+    background-color: #f6f2f1;
     ol {
         margin: 0px;
+        background-color: #e8e7e5;
     }
     li {
         background-color: #f6f2f1;
