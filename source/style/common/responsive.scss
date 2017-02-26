@@ -103,6 +103,17 @@
       top: calc(50% - 106px);
     }
   }
+  .c-slider-description {
+    flex-direction: column;
+  }
+  .c-slider-display {
+    width: 100%;
+    height: inherit;
+    position: inherit;
+  }
+  .c-slider-buttons {
+    margin-top: 0px;
+  }
 
   .l-callback .l-header__arrow {
     bottom: 240px;
@@ -137,9 +148,6 @@
   }
   .l-header__portfolio {
     display: none;
-  }
-  .l-content .c-half-block_mbottom {
-    order: -1;
   }
 
   .l-blog-lnav {

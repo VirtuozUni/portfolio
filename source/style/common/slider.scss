@@ -1,12 +1,21 @@
+.c-slider-display {
+  left: 50%;
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  height: 320px;
+  display: block;
+  background: #eeebdf;
+}
 .c-slider-main-image {
   max-height: 320px;
   max-width: 100%;
   margin: 102px 0px;
-  position: relative;
-  @include centeredX();
 }
+
 .c-slider-buttons {
   display: flex;
+  margin-top: 524px;
   width: 100%;
   height: 225px;
   &__left{
