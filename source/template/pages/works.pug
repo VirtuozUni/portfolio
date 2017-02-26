@@ -23,23 +23,26 @@ block content
       svg.l-header__arrow
         use(xlink:href='assets/img/sprite.svg#portf_arrow_down')
     .c-full-block
-      svg(viewBox="0 0 1000 287" preserveAspectRatio="none").c-full-block__triangle
-        polygon(points="0,0 0,287 1000,287 1000,0 500,105")
+      svg(viewBox="0 0 1000 100" preserveAspectRatio="none").c-full-block__triangle
+        polygon(points="0,0 0,100 1000,100")
+      svg(viewBox="0 0 1000 100" preserveAspectRatio="none").c-full-block__triangle.triangle_right
+        polygon(points="1000,0 1000,100 0,100")
 
       .c-title Мои работы
       svg.c-title-bg
         use(xlink:href='assets/img/sprite.svg#works_header')
     .l-content
-      .c-half-block.c-half-block_left
+      .c-half-block.c-half-block_left(style='display: flex;')
+        .c-slider-display
+          img.c-slider-main-image(src='/assets/img/slider/work-1.png')
         .c-valign
           .c-subtitle(style="max-width: 267px;") Сайт школы онлайн образования
           .c-accent-title HTML, CSS, JAVASCRIPT
-          .c-half-block__button-place
-            a.c-button
-              i.fa.fa-link(aria-hidden='true')
-              | Посмотреть сайт
+          a.c-button
+            i.fa.fa-link(aria-hidden='true')
+            | Посмотреть сайт
       .c-half-block.c-half-block_mbottom
-        img.c-slider-main-image(src='/assets/img/slider/work-1.png')
+
         .c-slider-buttons
           .c-slider-buttons__left
             img.l-left__preview
@@ -52,7 +55,7 @@ block content
             svg.l-right__arrow
               use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
     .l-callback
-      .c-title что обо мне говорят
+      .c-title.c-title_about что обо мне говорят
       svg.c-title-bg
         use(xlink:href='assets/img/sprite.svg#about_header')
       .c-feedback
@@ -75,6 +78,7 @@ block content
               .c-autor__name Сабанцев Владимир
                 .c-autor__position преподаватель
       .l-callback__callback-place
+        .blur
         .c-subtitle Связаться со мной
         input(type="text" placeholder="Имя").l-callback__name
         input(type="text" placeholder="Email").l-callback__mail

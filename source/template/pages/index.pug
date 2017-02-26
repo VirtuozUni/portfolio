@@ -5,7 +5,7 @@ block variables
   - var script = 'parallax();'
 
 block content
-  .l-background#parallax
+  .l-background#parallax(onclick="$('.l-welcome-box').removeClass('hover')")
     .parallax_layer
       img(src='./assets/img/parallax/parallax-1.png')
     .parallax_layer

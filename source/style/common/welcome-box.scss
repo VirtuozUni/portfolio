@@ -5,6 +5,8 @@
 .l-welcome-box {
   margin-bottom: auto;
   margin-top: auto;
+  overflow: hidden;
+  height: 350px;
   perspective: 1000px;
   &.hover .flipper {
     transform: rotateY(180deg);

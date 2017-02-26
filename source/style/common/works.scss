@@ -1,10 +1,17 @@
 .c-valign {
-  position: relative;
-  @include centeredY();
+  width: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Regular";
 }
 .c-galign {
-  position: relative;
-  @include centeredX();
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .c-accent-title {
   margin: 0px 90px;
@@ -17,16 +24,24 @@
   font-size: 16px;
 }
 .l-callback {
-  height:1287px;
+  min-height:1287px;
   width: 100%;
+  position: relative;
   background-image: url('/assets/img/works.png');
   background-size: cover;
-  background-position: center top;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   .c-title {
     max-width: 300px;
     margin-top: 56px;
+  }
+  .c-title.c-title_about {
+    position: inherit;
+    transform: inherit;
+    left: inherit;
   }
   .c-title-bg {
     height: 174px;
@@ -36,7 +51,12 @@
     width: 100%;
     display: flex;
     &__feedback-block {
+      &:first-child {
+        padding-left: 20px;
+      }
       width: 400px;
+      flex-direction: column;
+      display: flex;
       float: left;
       font-family: "Roboto Regular";
       font-size: 16px;
@@ -83,14 +103,23 @@
     }
   }
   &__callback-place {
-    background-color: rgba(#fcfcfc,.4);
     width:380px;
-    margin-top: 65px;
+    margin-top: 28px;
     padding: 35px 20px;
     padding-bottom: 20px;
+    overflow: hidden;
     border-radius: 4px 4px 0px 0px;
-    position: absolute;
-    @include centeredX();
+    position: relative;
+    margin-bottom: 225px;
+    .blur {
+      position: absolute;
+      width: 100%;
+      left:0px;
+      top:0px;
+      height: calc(100% - 45px);
+      background-image: url('/assets/img/works.png');
+      filter:blur(20px);
+    }
     .c-subtitle {
       max-width: 255px;
       margin-bottom: 12px;
@@ -101,6 +130,8 @@
     width:100%;
     font-family: "Roboto Regular";
     font-size: 16px;
+    z-index: 5;
+    position: relative;
     padding: 13px 20px;
     color: $h2_color;
     margin-top: 20px;
@@ -112,10 +143,11 @@
   }
   .c-bottom-buttons {
     display: flex;
-    position: absolute;
-    bottom: -45px;
-    width: 100%;
-    left: 0px;
+    position: relative;
+    bottom: 0rem;
+    width: calc(100% + 40px);
+    top: 20px;
+    left: -20px;
     list-style: none;
     height: 45px;
     color: #fff;
