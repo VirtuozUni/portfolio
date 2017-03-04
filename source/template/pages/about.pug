@@ -25,15 +25,18 @@ block content
       .c-half-block.c-half-block_left
         svg(viewBox="0 0 1000 100" preserveAspectRatio="none").c-half-block__triangle
           polygon(points="0,0 0,100 1000,100")
-        .c-title Обо мне
-        svg.c-title-bg
-          use(xlink:href='assets/img/sprite.svg#about_header')
-        .c-half-block__pic
-          img.pic__image(src='/assets/img/hero.png')
-        .c-subtitle Кто я
-        .c-half-block__description
-          p Я веб разработчик из Москвы. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-          p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .c-content-container
+          .c-title-container
+            .c-title Обо мне
+            svg.c-title-bg
+              use(xlink:href='assets/img/sprite.svg#about_header')
+          .c-text-container
+            .c-half-block__pic
+              img.pic__image(src='/assets/img/hero.png')
+            .c-subtitle Кто я
+            .c-half-block__description
+              p Я веб разработчик из Москвы. Мне 26 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
       .c-half-block
         svg(viewBox="0 0 1000 100" preserveAspectRatio="none").c-half-block__triangle

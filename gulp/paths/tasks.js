@@ -14,4 +14,3 @@ module.exports = [
     './gulp/tasks/sprite.svg.js',
     './gulp/tasks/sprite.js'
 ];
-

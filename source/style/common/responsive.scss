@@ -8,7 +8,7 @@
   .c-copy.c-copy_welcome-copy {
     margin-bottom: 2rem;
   }
-  .l-auth-block__button{
+  .l-auth-block{
     margin-right: 1.5rem;
   }
   .l-header {
@@ -339,4 +339,33 @@
   }
 
 
+}
+
+@media (min-width: 1800px) {
+  .l-auth-block {
+    margin-top: 24px;
+    &__button {
+      margin-right: 100px;
+    }
+  }
+  .c-copy.c-copy_welcome-copy {
+    margin-bottom: 40px;
+  }
+  .c-content-container {
+    display: flex;
+    flex-direction: row;
+    .c-title-container, .c-text-container { flex:1; }
+    .c-text-container .c-half-block__description {
+      margin: 34px 0px 0px 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  .l-content_center {
+    justify-content: center;
+  }
+  .c-blog-articles {
+    max-width: 1100px;
+    margin-right: 0px;
+  }
 }

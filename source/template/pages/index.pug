@@ -5,7 +5,7 @@ block variables
   - var script = 'parallax();'
 
 block content
-  .l-background#parallax(onclick="$('.l-welcome-box').removeClass('hover')")
+  .l-background#parallax
     .parallax_layer
       img(src='./assets/img/parallax/parallax-1.png')
     .parallax_layer
@@ -28,7 +28,7 @@ block content
       img(src='./assets/img/parallax/parallax-10.png')
   .wrapper.wrapper_welcome
     .l-auth-block
-      .l-auth-block__button(onclick="$('.l-welcome-box').toggleClass('hover')") Авторизоваться
+      .l-auth-block__button Авторизоваться
     .l-welcome-box
       .flipper
         .c-side-content.front

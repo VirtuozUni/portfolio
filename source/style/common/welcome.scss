@@ -31,6 +31,8 @@
 .l-auth-block {
   display: flex;
   align-self: flex-end;
+  height: 46px;
+  margin-top: 24px;
   &__button {
     color:#fff;
     cursor: pointer;
@@ -38,7 +40,6 @@
     font-family: "Roboto Medium";
     transition: .5s;
     font-size: 16px;
-    margin-top: 24px;
     border: 1px solid #fff;
     padding: 13px 28px;
     border-radius: 4px;
@@ -52,10 +53,22 @@
 @import 'welcome-box';
 @import 'hero';
 @import 'socials';
-
 .c-button__link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+  flex: 1;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  transition: .5s;
+  border-left: 2px solid rgba(#dee3e7, .5);
+  background: rgba($main_color, .85);
+
+  &:hover {
+    background: rgba($hover_main_color, .85);
+  }
 }
 
 .c-copy {

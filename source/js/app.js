@@ -36,14 +36,9 @@ var blur = (function() {
             var imgWidth = document.querySelector('.l-callback').offsetWidth,
                 posLeft  = -wrapper.offsetLeft,
                 posTop = -wrapper.offsetTop,
-                blurCSS = form.style,
-                imgProc = imgWidth/bgImgW,
-                imgHeight = bgImgH * imgProc,
-                offsetH = document.querySelector('.l-callback').offsetHeight,
-                realTop =  offsetH - imgHeight + posTop;
-            console.log(posTop,imgWidth,imgProc,imgHeight,offsetH,realTop );
+                blurCSS = form.style;
             blurCSS.backgroundSize = imgWidth + 'px' + ' auto';
-            blurCSS.backgroundPosition = posLeft + 'px' + ' ' + realTop + 'px';
+            blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
        }
    }
 }());

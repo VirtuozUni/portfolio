@@ -5,8 +5,7 @@
 .l-welcome-box {
   margin-bottom: auto;
   margin-top: auto;
-  overflow: hidden;
-  //height: 350px;
+  //overflow: hidden;
   perspective: 1000px;
   &.hover .flipper {
     transform: rotateY(180deg);
@@ -56,34 +55,26 @@
       display: flex;
       .l-welcome-buttons__button {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0px;
-        flex: 1;
-        cursor: pointer;
-        transition: .5s;
-        border-left: 2px solid rgba(#dee3e7, .5);
-        background: rgba($main_color, .85);
-        &:first-child {
+        width: 100%;
+        &:first-child .c-button__link {
           border-radius: 0px 0px 0px 4px;
           border-left: none;
         }
-        &:last-child {
+        &:last-child .c-button__link {
           border-radius: 0px 0px 4px 0px;
         }
-        &:hover {
-          background: rgba($hover_main_color, .85);
-        }
+
       }
     }
   }
+
   .c-centered-col {
     width: 100%;
     text-align: center;
     color: $h2_color;
     font-family: 'Roboto Bold';
-
   }
+
   .input-w-icon {
     border: none;
     height: 45px;

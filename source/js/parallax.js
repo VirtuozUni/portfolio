@@ -5,7 +5,32 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 function parallax() {
     if (!isMobile || window.innerWidth > 768) {
+        $('.wrapper_welcome').click(function (e) {
 
+            if($('.l-welcome-box').hasClass('hover') && $(this).data('blocked') == false)
+            {
+                var pageX = e.pageX,
+                    pageY = e.pageY,
+                    wbox = $('.c-side-content.back'),
+                    wboxW = wbox.width(),
+                    wboxH = wbox.height(),
+                    wboxOffset = wbox.offset();
+                if(pageX < wboxOffset.left || pageX > (wboxOffset.left + wboxW) || pageY < wboxOffset.top || pageY > (wboxOffset.top + wboxH))
+                {
+                    console.log('removeClass');
+                    $('.l-welcome-box').removeClass('hover');
+                    $('.l-auth-block__button').show();
+                }
+            }
+            else
+                $('.wrapper_welcome').data('blocked', false);
+        });
+        $('.l-auth-block__button').click(function () {
+            console.log('addClass');
+            $('.l-welcome-box').addClass('hover');
+            $('.l-auth-block__button').hide();
+            $('.wrapper_welcome').data('blocked', true);
+        });
         var pContainer = document.getElementById('parallax'),
             layers = pContainer.children;
 

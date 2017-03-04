@@ -55,42 +55,42 @@ block content
             svg.l-right__arrow
               use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
     .l-callback
-      .c-title.c-title_about что обо мне говорят
-      svg.c-title-bg
-        use(xlink:href='assets/img/sprite.svg#about_header')
-      .c-feedback
-        .c-galign
-          .c-feedback__feedback-block
-            i.fa.fa-quote-left(aria-hidden='true')
-            .c-feedback-block__text
-              |Этот парень проходил обучение веб-разработке не где-то,
-              |а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-            .c-feedback-block__autor
-              .c-autor__avatar(style="background-image:url('/assets/img/feedback_autor-1.png')")
-              .c-autor__name Ковальчук Дмитрий
-                .c-autor__position основатель Loftschool
-          .c-feedback__feedback-block
-            i.fa.fa-quote-left(aria-hidden='true')
-            .c-feedback-block__text
-              | Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-            .c-feedback-block__autor
-              .c-autor__avatar(style="background-image:url('/assets/img/feedback_autor-2.png')")
-              .c-autor__name Сабанцев Владимир
-                .c-autor__position преподаватель
-      .l-callback__callback-place
-        .blur
-        .c-subtitle Связаться со мной
-        input(type="text" placeholder="Имя").l-callback__name
-        input(type="text" placeholder="Email").l-callback__mail
-        textarea(placeholder="Ваше сообщение" rows="6").l-callback__message
-        ul.c-bottom-buttons
-          +menuItem('c-bottom-buttons__button','c-button__link',[{title: "Отправить", link: "#"}, {
-              title: 'Очистить',
-              link: '#'}])
-      svg.l-header__arrow
-        use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
-
-
+      img.l-callback__bg(src='assets/img/works.png')
+      .l-callback__container
+        .c-title.c-title_about что обо мне говорят
+        svg.c-title-bg
+          use(xlink:href='assets/img/sprite.svg#about_header')
+        .c-feedback
+          .c-galign
+            .c-feedback__feedback-block
+              i.fa.fa-quote-left(aria-hidden='true')
+              .c-feedback-block__text
+                |Этот парень проходил обучение веб-разработке не где-то,
+                |а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              .c-feedback-block__autor
+                .c-autor__avatar(style="background-image:url('/assets/img/feedback_autor-1.png')")
+                .c-autor__name Ковальчук Дмитрий
+                  .c-autor__position основатель Loftschool
+            .c-feedback__feedback-block
+              i.fa.fa-quote-left(aria-hidden='true')
+              .c-feedback-block__text
+                | Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+              .c-feedback-block__autor
+                .c-autor__avatar(style="background-image:url('/assets/img/feedback_autor-2.png')")
+                .c-autor__name Сабанцев Владимир
+                  .c-autor__position преподаватель
+        .l-callback__callback-place
+          .blur
+          .c-subtitle Связаться со мной
+          input(type="text" placeholder="Имя").l-callback__name
+          input(type="text" placeholder="Email").l-callback__mail
+          textarea(placeholder="Ваше сообщение" rows="6").l-callback__message
+          ul.c-bottom-buttons
+            +menuItem('c-bottom-buttons__button','c-button__link',[{title: "Отправить", link: "#"}, {
+                title: 'Очистить',
+                link: '#'}])
+        svg.l-header__arrow
+          use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
 
   include ../common/footer
   script(src='/assets/js/app.js' defer)
