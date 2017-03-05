@@ -62,6 +62,18 @@ var welcome = (function(){
         preloader: function() {
             preloader.init();
         },
+        message: function(text){
+            alert(text);
+        },
+        login: function() {
+          $('.c-side-content.back .l-welcome-buttons__button:last-child .c-button__link')[0].click(function(){
+                if($('#robot:checked').length == 0) blog.message('Вы робот!');
+                else if($('#robot-yes:checked').length == 0) blog.message('Вы робот!');
+                else {
+
+                }
+          });
+        },
         init: function() {
             this.flipper();
             this.parallax();
