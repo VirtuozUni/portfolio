@@ -32,16 +32,19 @@
 }
 .l-blog-lnav {
   width: 310px;
+  position: inherit;
   //margin-left: 10px;
   &__list {
     list-style:none;
     display: flex;
+    width: 310px;
     flex-direction: column;
     align-items: flex-end;
 
     .l-blog-lnav__item {
       padding: 15px 20px 15px 0px;
       text-align: right;
+      cursor: pointer;
       color: $h2_color;
       &.item_active {
         color: $main_color;

@@ -1,33 +1,256 @@
-!function(){var s=null;
-(function(){function V(l){function m(){try{M.doScroll("left")}catch(i){setTimeout(m,50);return}w("poll")}function w(m){if(!(m.type=="readystatechange"&&i.readyState!="complete")&&((m.type=="load"?x:i)[t](Q+m.type,w,!1),!g&&(g=!0)))l.call(x,m.type||m)}var g=!1,B=!0,z=i.addEventListener?"addEventListener":"attachEvent",t=i.addEventListener?"removeEventListener":"detachEvent",Q=i.addEventListener?"":"on";if(i.readyState=="complete")l.call(x,"lazy");else{if(i.createEventObject&&M.doScroll){try{B=!x.frameElement}catch(p){}B&&
-m()}i[z](Q+"DOMContentLoaded",w,!1);i[z](Q+"readystatechange",w,!1);x[z](Q+"load",w,!1)}}for(var x=window,i=document,M=i.documentElement,N=i.getElementsByTagName("head")[0]||i.documentElement,C="",O=i.scripts,l=O.length;--l>=0;){var g=O[l],R=g.src.match(/^[^#?]*\/run_prettify\.js(\?[^#]*)?(?:#.*)?$/);if(R){C=R[1]||"";g.parentNode.removeChild(g);break}}var P=!0,I=[],J=[],K=[];C.replace(/[&?]([^&=]+)=([^&]+)/g,function(i,m,w){w=decodeURIComponent(w);m=decodeURIComponent(m);m=="autorun"?P=!/^[0fn]/i.test(w):
-m=="lang"?I.push(w):m=="skin"?J.push(w):m=="callback"&&K.push(w)});l=0;for(C=I.length;l<C;++l)g=i.createElement("script"),g.type="text/javascript",g.src="https://google-code-prettify.googlecode.com/svn/loader/lang-"+encodeURIComponent(I[l])+".js",N.appendChild(g);g=[];l=0;for(C=J.length;l<C;++l)g.push("https://google-code-prettify.googlecode.com/svn/loader/skins/"+encodeURIComponent(J[l])+".css");g.push("https://google-code-prettify.googlecode.com/svn/loader/prettify.css");(function(l){function m(g){if(g!==
-w){var B=i.createElement("link");B.rel="stylesheet";B.type="text/css";if(g+1<w)B.error=B.onerror=function(){m(g+1)};B.href=l[g];N.appendChild(B)}}var w=l.length;m(0)})(g);var W=function(){window.PR_SHOULD_USE_CONTINUATION=!0;var i;(function(){function m(b){function c(e){var b=e.charCodeAt(0);if(b!==92)return b;var a=e.charAt(1);return(b=g[a])?b:"0"<=a&&a<="7"?parseInt(e.substring(1),8):a==="u"||a==="x"?parseInt(e.substring(2),16):e.charCodeAt(1)}function h(e){if(e<32)return(e<16?"\\x0":"\\x")+e.toString(16);
-e=String.fromCharCode(e);return e==="\\"||e==="-"||e==="]"||e==="^"?"\\"+e:e}function d(e){var b=e.substring(1,e.length-1).match(/\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\[0-3][0-7]{0,2}|\\[0-7]{1,2}|\\[\S\s]|[^\\]/g),e=[],a=b[0]==="^",d=["["];a&&d.push("^");for(var a=a?1:0,f=b.length;a<f;++a){var k=b[a];if(/\\[bdsw]/i.test(k))d.push(k);else{var k=c(k),n;a+2<f&&"-"===b[a+1]?(n=c(b[a+2]),a+=2):n=k;e.push([k,n]);n<65||k>122||(n<65||k>90||e.push([Math.max(65,k)|32,Math.min(n,90)|32]),n<97||k>122||e.push([Math.max(97,
-k)&-33,Math.min(n,122)&-33]))}}e.sort(function(e,a){return e[0]-a[0]||a[1]-e[1]});b=[];f=[];for(a=0;a<e.length;++a)k=e[a],k[0]<=f[1]+1?f[1]=Math.max(f[1],k[1]):b.push(f=k);for(a=0;a<b.length;++a)k=b[a],d.push(h(k[0])),k[1]>k[0]&&(k[1]+1>k[0]&&d.push("-"),d.push(h(k[1])));d.push("]");return d.join("")}function i(e){for(var a=e.source.match(/\[(?:[^\\\]]|\\[\S\s])*]|\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\\d+|\\[^\dux]|\(\?[!:=]|[()^]|[^()[\\^]+/g),b=a.length,c=[],f=0,k=0;f<b;++f){var n=a[f];n==="("?++k:
-"\\"===n.charAt(0)&&(n=+n.substring(1))&&(n<=k?c[n]=-1:a[f]=h(n))}for(f=1;f<c.length;++f)-1===c[f]&&(c[f]=++m);for(k=f=0;f<b;++f)n=a[f],n==="("?(++k,c[k]||(a[f]="(?:")):"\\"===n.charAt(0)&&(n=+n.substring(1))&&n<=k&&(a[f]="\\"+c[n]);for(f=0;f<b;++f)"^"===a[f]&&"^"!==a[f+1]&&(a[f]="");if(e.ignoreCase&&E)for(f=0;f<b;++f)n=a[f],e=n.charAt(0),n.length>=2&&e==="["?a[f]=d(n):e!=="\\"&&(a[f]=n.replace(/[A-Za-z]/g,function(a){a=a.charCodeAt(0);return"["+String.fromCharCode(a&-33,a|32)+"]"}));return a.join("")}
-for(var m=0,E=!1,j=!1,H=0,a=b.length;H<a;++H){var o=b[H];if(o.ignoreCase)j=!0;else if(/[a-z]/i.test(o.source.replace(/\\u[\da-f]{4}|\\x[\da-f]{2}|\\[^UXux]/gi,""))){E=!0;j=!1;break}}for(var g={b:8,t:9,n:10,v:11,f:12,r:13},q=[],H=0,a=b.length;H<a;++H){o=b[H];if(o.global||o.multiline)throw Error(""+o);q.push("(?:"+i(o)+")")}return RegExp(q.join("|"),j?"gi":"g")}function l(b,c){function h(b){var a=b.nodeType;if(a==1){if(!d.test(b.className)){for(a=b.firstChild;a;a=a.nextSibling)h(a);a=b.nodeName.toLowerCase();
-if("br"===a||"li"===a)i[j]="\n",E[j<<1]=m++,E[j++<<1|1]=b}}else if(a==3||a==4)a=b.nodeValue,a.length&&(a=c?a.replace(/\r\n?/g,"\n"):a.replace(/[\t\n\r ]+/g," "),i[j]=a,E[j<<1]=m,m+=a.length,E[j++<<1|1]=b)}var d=/(?:^|\s)nocode(?:\s|$)/,i=[],m=0,E=[],j=0;h(b);return{a:i.join("").replace(/\n$/,""),d:E}}function g(b,c,h,d){c&&(b={a:c,e:b},h(b),d.push.apply(d,b.g))}function B(b){for(var c=void 0,h=b.firstChild;h;h=h.nextSibling)var d=h.nodeType,c=d===1?c?b:h:d===3?V.test(h.nodeValue)?b:c:c;return c===
-b?void 0:c}function z(b,c){function h(b){for(var j=b.e,m=[j,"pln"],a=0,o=b.a.match(i)||[],X={},q=0,e=o.length;q<e;++q){var A=o[q],y=X[A],u=void 0,f;if(typeof y==="string")f=!1;else{var k=d[A.charAt(0)];if(k)u=A.match(k[1]),y=k[0];else{for(f=0;f<l;++f)if(k=c[f],u=A.match(k[1])){y=k[0];break}u||(y="pln")}if((f=y.length>=5&&"lang-"===y.substring(0,5))&&!(u&&typeof u[1]==="string"))f=!1,y="src";f||(X[A]=y)}k=a;a+=A.length;if(f){f=u[1];var n=A.indexOf(f),G=n+f.length;u[2]&&(G=A.length-u[2].length,n=G-
-f.length);y=y.substring(5);g(j+k,A.substring(0,n),h,m);g(j+k+n,f,C(y,f),m);g(j+k+G,A.substring(G),h,m)}else m.push(j+k,y)}b.g=m}var d={},i;(function(){for(var h=b.concat(c),j=[],g={},a=0,o=h.length;a<o;++a){var l=h[a],q=l[3];if(q)for(var e=q.length;--e>=0;)d[q.charAt(e)]=l;l=l[1];q=""+l;g.hasOwnProperty(q)||(j.push(l),g[q]=s)}j.push(/[\S\s]/);i=m(j)})();var l=c.length;return h}function t(b){var c=[],h=[];b.tripleQuotedStrings?c.push(["str",/^(?:'''(?:[^'\\]|\\[\S\s]|''?(?=[^']))*(?:'''|$)|"""(?:[^"\\]|\\[\S\s]|""?(?=[^"]))*(?:"""|$)|'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$))/,
-s,"'\""]):b.multiLineStrings?c.push(["str",/^(?:'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$)|`(?:[^\\`]|\\[\S\s])*(?:`|$))/,s,"'\"`"]):c.push(["str",/^(?:'(?:[^\n\r'\\]|\\.)*(?:'|$)|"(?:[^\n\r"\\]|\\.)*(?:"|$))/,s,"\"'"]);b.verbatimStrings&&h.push(["str",/^@"(?:[^"]|"")*(?:"|$)/,s]);var d=b.hashComments;d&&(b.cStyleComments?(d>1?c.push(["com",/^#(?:##(?:[^#]|#(?!##))*(?:###|$)|.*)/,s,"#"]):c.push(["com",/^#(?:(?:define|e(?:l|nd)if|else|error|ifn?def|include|line|pragma|undef|warning)\b|[^\n\r]*)/,
-s,"#"]),h.push(["str",/^<(?:(?:(?:\.\.\/)*|\/?)(?:[\w-]+(?:\/[\w-]+)+)?[\w-]+\.h(?:h|pp|\+\+)?|[a-z]\w*)>/,s])):c.push(["com",/^#[^\n\r]*/,s,"#"]));b.cStyleComments&&(h.push(["com",/^\/\/[^\n\r]*/,s]),h.push(["com",/^\/\*[\S\s]*?(?:\*\/|$)/,s]));b.regexLiterals&&h.push(["lang-regex",/^(?:^^\.?|[+-]|[!=]={0,2}|#|%=?|&&?=?|\(|\*=?|[+-]=|->|\/=?|::?|<<?=?|>{1,3}=?|[,;?@[{~]|\^\^?=?|\|\|?=?|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\s*(\/(?=[^*/])(?:[^/[\\]|\\[\S\s]|\[(?:[^\\\]]|\\[\S\s])*(?:]|$))+\/)/]);
-(d=b.types)&&h.push(["typ",d]);b=(""+b.keywords).replace(/^ | $/g,"");b.length&&h.push(["kwd",RegExp("^(?:"+b.replace(/[\s,]+/g,"|")+")\\b"),s]);c.push(["pln",/^\s+/,s," \r\n\t\u00a0"]);h.push(["lit",/^@[$_a-z][\w$@]*/i,s],["typ",/^(?:[@_]?[A-Z]+[a-z][\w$@]*|\w+_t\b)/,s],["pln",/^[$_a-z][\w$@]*/i,s],["lit",/^(?:0x[\da-f]+|(?:\d(?:_\d+)*\d*(?:\.\d*)?|\.\d\+)(?:e[+-]?\d+)?)[a-z]*/i,s,"0123456789"],["pln",/^\\[\S\s]?/,s],["pun",/^.[^\s\w"$'./@\\`]*/,s]);return z(c,h)}function x(b,c,h){function d(a){var b=
-a.nodeType;if(b==1&&!i.test(a.className))if("br"===a.nodeName)m(a),a.parentNode&&a.parentNode.removeChild(a);else for(a=a.firstChild;a;a=a.nextSibling)d(a);else if((b==3||b==4)&&h){var c=a.nodeValue,g=c.match(l);if(g)b=c.substring(0,g.index),a.nodeValue=b,(c=c.substring(g.index+g[0].length))&&a.parentNode.insertBefore(j.createTextNode(c),a.nextSibling),m(a),b||a.parentNode.removeChild(a)}}function m(b){function c(a,b){var d=b?a.cloneNode(!1):a,e=a.parentNode;if(e){var e=c(e,1),h=a.nextSibling;e.appendChild(d);
-for(var g=h;g;g=h)h=g.nextSibling,e.appendChild(g)}return d}for(;!b.nextSibling;)if(b=b.parentNode,!b)return;for(var b=c(b.nextSibling,0),d;(d=b.parentNode)&&d.nodeType===1;)b=d;a.push(b)}for(var i=/(?:^|\s)nocode(?:\s|$)/,l=/\r\n?|\n/,j=b.ownerDocument,g=j.createElement("li");b.firstChild;)g.appendChild(b.firstChild);for(var a=[g],o=0;o<a.length;++o)d(a[o]);c===(c|0)&&a[0].setAttribute("value",c);var p=j.createElement("ol");p.className="linenums";for(var c=Math.max(0,c-1|0)||0,o=0,q=a.length;o<q;++o)g=
-a[o],g.className="L"+(o+c)%10,g.firstChild||g.appendChild(j.createTextNode("\u00a0")),p.appendChild(g);b.appendChild(p)}function p(b,c){for(var h=c.length;--h>=0;){var d=c[h];S.hasOwnProperty(d)?T.console&&console.warn("cannot override language handler %s",d):S[d]=b}}function C(b,c){if(!b||!S.hasOwnProperty(b))b=/^\s*</.test(c)?"default-markup":"default-code";return S[b]}function I(b){var c=b.h;try{var h=l(b.c,b.i),d=h.a;b.a=d;b.d=h.d;b.e=0;C(c,d)(b);var g=/\bMSIE\s(\d+)/.exec(navigator.userAgent),
-g=g&&+g[1]<=8,c=/\n/g,m=b.a,i=m.length,h=0,j=b.d,p=j.length,d=0,a=b.g,o=a.length,t=0;a[o]=i;var q,e;for(e=q=0;e<o;)a[e]!==a[e+2]?(a[q++]=a[e++],a[q++]=a[e++]):e+=2;o=q;for(e=q=0;e<o;){for(var A=a[e],y=a[e+1],u=e+2;u+2<=o&&a[u+1]===y;)u+=2;a[q++]=A;a[q++]=y;e=u}a.length=q;var f=b.c,k;if(f)k=f.style.display,f.style.display="none";try{for(;d<p;){var n=j[d+2]||i,G=a[t+2]||i,u=Math.min(n,G),D=j[d+1],U;if(D.nodeType!==1&&(U=m.substring(h,u))){g&&(U=U.replace(c,"\r"));D.nodeValue=U;var Y=D.ownerDocument,
-r=Y.createElement("span");r.className=a[t+1];var x=D.parentNode;x.replaceChild(r,D);r.appendChild(D);h<n&&(j[d+1]=D=Y.createTextNode(m.substring(u,n)),x.insertBefore(D,r.nextSibling))}h=u;h>=n&&(d+=2);h>=G&&(t+=2)}}finally{if(f)f.style.display=k}}catch(v){T.console&&console.log(v&&v.stack||v)}}var T=window,F=["break,continue,do,else,for,if,return,while"],L=[[F,"auto,case,char,const,default,double,enum,extern,float,goto,inline,int,long,register,short,signed,sizeof,static,struct,switch,typedef,union,unsigned,void,volatile"],
-"catch,class,delete,false,import,new,operator,private,protected,public,this,throw,true,try,typeof"],J=[L,"alignof,align_union,asm,axiom,bool,concept,concept_map,const_cast,constexpr,decltype,delegate,dynamic_cast,explicit,export,friend,generic,late_check,mutable,namespace,nullptr,property,reinterpret_cast,static_assert,static_cast,template,typeid,typename,using,virtual,where"],K=[L,"abstract,assert,boolean,byte,extends,final,finally,implements,import,instanceof,interface,null,native,package,strictfp,super,synchronized,throws,transient"],
-M=[K,"as,base,by,checked,decimal,delegate,descending,dynamic,event,fixed,foreach,from,group,implicit,in,internal,into,is,let,lock,object,out,override,orderby,params,partial,readonly,ref,sbyte,sealed,stackalloc,string,select,uint,ulong,unchecked,unsafe,ushort,var,virtual,where"],L=[L,"debugger,eval,export,function,get,null,set,undefined,var,with,Infinity,NaN"],N=[F,"and,as,assert,class,def,del,elif,except,exec,finally,from,global,import,in,is,lambda,nonlocal,not,or,pass,print,raise,try,with,yield,False,True,None"],
-O=[F,"alias,and,begin,case,class,def,defined,elsif,end,ensure,false,in,module,next,nil,not,or,redo,rescue,retry,self,super,then,true,undef,unless,until,when,yield,BEGIN,END"],R=[F,"as,assert,const,copy,drop,enum,extern,fail,false,fn,impl,let,log,loop,match,mod,move,mut,priv,pub,pure,ref,self,static,struct,true,trait,type,unsafe,use"],F=[F,"case,done,elif,esac,eval,fi,function,in,local,set,then,until"],P=/^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\d*)\b/,
-V=/\S/,W=t({keywords:[J,M,L,"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",N,O,F],hashComments:!0,cStyleComments:!0,multiLineStrings:!0,regexLiterals:!0}),S={};p(W,["default-code"]);p(z([],[["pln",/^[^<?]+/],["dec",/^<!\w[^>]*(?:>|$)/],["com",/^<\!--[\S\s]*?(?:--\>|$)/],["lang-",/^<\?([\S\s]+?)(?:\?>|$)/],["lang-",/^<%([\S\s]+?)(?:%>|$)/],["pun",/^(?:<[%?]|[%?]>)/],["lang-",
-/^<xmp\b[^>]*>([\S\s]+?)<\/xmp\b[^>]*>/i],["lang-js",/^<script\b[^>]*>([\S\s]*?)(<\/script\b[^>]*>)/i],["lang-css",/^<style\b[^>]*>([\S\s]*?)(<\/style\b[^>]*>)/i],["lang-in.tag",/^(<\/?[a-z][^<>]*>)/i]]),["default-markup","htm","html","mxml","xhtml","xml","xsl"]);p(z([["pln",/^\s+/,s," \t\r\n"],["atv",/^(?:"[^"]*"?|'[^']*'?)/,s,"\"'"]],[["tag",/^^<\/?[a-z](?:[\w-.:]*\w)?|\/?>$/i],["atn",/^(?!style[\s=]|on)[a-z](?:[\w:-]*\w)?/i],["lang-uq.val",/^=\s*([^\s"'>]*(?:[^\s"'/>]|\/(?=\s)))/],["pun",/^[/<->]+/],
-["lang-js",/^on\w+\s*=\s*"([^"]+)"/i],["lang-js",/^on\w+\s*=\s*'([^']+)'/i],["lang-js",/^on\w+\s*=\s*([^\s"'>]+)/i],["lang-css",/^style\s*=\s*"([^"]+)"/i],["lang-css",/^style\s*=\s*'([^']+)'/i],["lang-css",/^style\s*=\s*([^\s"'>]+)/i]]),["in.tag"]);p(z([],[["atv",/^[\S\s]+/]]),["uq.val"]);p(t({keywords:J,hashComments:!0,cStyleComments:!0,types:P}),["c","cc","cpp","cxx","cyc","m"]);p(t({keywords:"null,true,false"}),["json"]);p(t({keywords:M,hashComments:!0,cStyleComments:!0,verbatimStrings:!0,types:P}),
-["cs"]);p(t({keywords:K,cStyleComments:!0}),["java"]);p(t({keywords:F,hashComments:!0,multiLineStrings:!0}),["bash","bsh","csh","sh"]);p(t({keywords:N,hashComments:!0,multiLineStrings:!0,tripleQuotedStrings:!0}),["cv","py","python"]);p(t({keywords:"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",hashComments:!0,multiLineStrings:!0,regexLiterals:!0}),["perl","pl","pm"]);p(t({keywords:O,
-hashComments:!0,multiLineStrings:!0,regexLiterals:!0}),["rb","ruby"]);p(t({keywords:L,cStyleComments:!0,regexLiterals:!0}),["javascript","js"]);p(t({keywords:"all,and,by,catch,class,else,extends,false,finally,for,if,in,is,isnt,loop,new,no,not,null,of,off,on,or,return,super,then,throw,true,try,unless,until,when,while,yes",hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,regexLiterals:!0}),["coffee"]);p(t({keywords:R,cStyleComments:!0,multilineStrings:!0}),["rc","rs","rust"]);
-p(z([],[["str",/^[\S\s]+/]]),["regex"]);var Z=T.PR={createSimpleLexer:z,registerLangHandler:p,sourceDecorator:t,PR_ATTRIB_NAME:"atn",PR_ATTRIB_VALUE:"atv",PR_COMMENT:"com",PR_DECLARATION:"dec",PR_KEYWORD:"kwd",PR_LITERAL:"lit",PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"str",PR_TAG:"tag",PR_TYPE:"typ",prettyPrintOne:function(b,c,h){var d=document.createElement("div");d.innerHTML="<pre>"+b+"</pre>";d=d.firstChild;h&&x(d,h,!0);I({h:c,j:h,c:d,i:1});return d.innerHTML},
-prettyPrint:i=i=function(b,c){function h(){for(var d=T.PR_SHOULD_USE_CONTINUATION?a.now()+250:Infinity;o<m.length&&a.now()<d;o++){for(var c=m[o],i=k,l=c;l=l.previousSibling;){var j=l.nodeType,r=(j===7||j===8)&&l.nodeValue;if(r?!/^\??prettify\b/.test(r):j!==3||/\S/.test(l.nodeValue))break;if(r){i={};r.replace(/\b(\w+)=([\w%+\-.:]+)/g,function(a,b,c){i[b]=c});break}}l=c.className;if((i!==k||e.test(l))&&!t.test(l)){j=!1;for(r=c.parentNode;r;r=r.parentNode)if(f.test(r.tagName)&&r.className&&e.test(r.className)){j=
-!0;break}if(!j){c.className+=" prettyprinted";j=i.lang;if(!j){var j=l.match(q),z;if(!j&&(z=B(c))&&u.test(z.tagName))j=z.className.match(q);j&&(j=j[1])}if(w.test(c.tagName))r=1;else var r=c.currentStyle,v=g.defaultView,r=(r=r?r.whiteSpace:v&&v.getComputedStyle?v.getComputedStyle(c,s).getPropertyValue("white-space"):0)&&"pre"===r.substring(0,3);v=i.linenums;if(!(v=v==="true"||+v))v=(v=l.match(/\blinenums\b(?::(\d+))?/))?v[1]&&v[1].length?+v[1]:!0:!1;v&&x(c,v,r);p={h:j,c:c,j:v,i:r};I(p)}}}o<m.length?
-setTimeout(h,250):"function"===typeof b&&b()}for(var d=c||document.body,g=d.ownerDocument||document,d=[d.getElementsByTagName("pre"),d.getElementsByTagName("code"),d.getElementsByTagName("xmp")],m=[],i=0;i<d.length;++i)for(var j=0,l=d[i].length;j<l;++j)m.push(d[i][j]);var d=s,a=Date;a.now||(a={now:function(){return+new Date}});var o=0,p,q=/\blang(?:uage)?-([\w.]+)(?!\S)/,e=/\bprettyprint\b/,t=/\bprettyprinted\b/,w=/pre|xmp/i,u=/^code$/i,f=/^(?:pre|code|xmp)$/i,k={};h()}};typeof define==="function"&&
-define.amd&&define("google-code-prettify",[],function(){return Z})})();return i}();if(P)(x.code_google_com_googleprettify||(x.code_google_com_googleprettify={})).run=function(){V(function(){var g=K.length;W(g?function(){for(var i=0;i<g;++i)(function(g){setTimeout(function(){x.exports[K[g]].apply(x,arguments)},0)})(i)}:void 0)})},l=i.createElement("script"),l.type="text/javascript",l.appendChild(i.createTextNode("code_google_com_googleprettify.run()")),(i.body||i.documentElement).appendChild(l)})();}()
+/**
+ * @license
+ * Copyright (C) 2013 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @fileoverview
+ * <div style="white-space: pre">
+ * Looks at query parameters to decide which language handlers and style-sheets
+ * to load.
+ *
+ * Query Parameter     Format           Effect                        Default
+ * +------------------+---------------+------------------------------+--------+
+ * | autorun=         | true | false  | If true then prettyPrint()   | "true" |
+ * |                  |               | is called on page load.      |        |
+ * +------------------+---------------+------------------------------+--------+
+ * | lang=            | language name | Loads the language handler   | Can    |
+ * |                  |               | named "lang-<NAME>.js".      | appear |
+ * |                  |               | See available handlers at    | many   |
+ * |                  |               | https://github.com/google/   | times. |
+ * |                  |               | code-prettify/tree/master/   |        |
+ * |                  |               | src                          |        |
+ * +------------------+---------------+------------------------------+--------+
+ * | skin=            | skin name     | Loads the skin stylesheet    | none.  |
+ * |                  |               | named "<NAME>.css".          |        |
+ * |                  |               | https://cdn.rawgit.com/      |        |
+ * |                  |               | google/code-prettify/master/ |        |
+ * |                  |               | styles/index.html            |        |
+ * +------------------+---------------+------------------------------+--------+
+ * | callback=        | JS identifier | When "prettyPrint" finishes  | none   |
+ * |                  |               | window.exports[js_ident] is  |        |
+ * |                  |               | called.                      |        |
+ * |                  |               | The callback must be under   |        |
+ * |                  |               | exports to reduce the risk   |        |
+ * |                  |               | of XSS via query parameter   |        |
+ * |                  |               | injection.                   |        |
+ * +------------------+---------------+------------------------------+--------+
+ *
+ * Examples
+ * .../run_prettify.js?lang=css&skin=sunburst
+ *   1. Loads the CSS language handler which can be used to prettify CSS
+ *      stylesheets, HTML <style> element bodies and style="..." attributes
+ *      values.
+ *   2. Loads the sunburst.css stylesheet instead of the default prettify.css
+ *      stylesheet.
+ *      A gallery of stylesheets is available at
+ *      https://cdn.rawgit.com/google/code-prettify/master/styles/index.html
+ *   3. Since autorun=false is not specified, calls prettyPrint() on page load.
+ * </div>
+ */
+
+!(function () {
+    "use strict";
+
+    var win = window;
+    var doc = document;
+    var root = doc.documentElement;
+    var head = doc['head'] || doc.getElementsByTagName("head")[0] || root;
+
+    // From http://javascript.nwbox.com/ContentLoaded/contentloaded.js
+    // Author: Diego Perini (diego.perini at gmail.com)
+    // Summary: cross-browser wrapper for DOMContentLoaded
+    // Updated: 20101020
+    // License: MIT
+    // Version: 1.2
+    function contentLoaded(callback) {
+        var addEventListener = doc['addEventListener'];
+        var done = false, top = true,
+            add = addEventListener ? 'addEventListener' : 'attachEvent',
+            rem = addEventListener ? 'removeEventListener' : 'detachEvent',
+            pre = addEventListener ? '' : 'on',
+
+            init = function(e) {
+                if (e.type == 'readystatechange' && doc.readyState != 'complete') {
+                    return;
+                }
+                (e.type == 'load' ? win : doc)[rem](pre + e.type, init, false);
+                if (!done && (done = true)) { callback.call(win, e.type || e); }
+            },
+
+            poll = function() {
+                try {
+                    root.doScroll('left');
+                } catch(e) {
+                    win.setTimeout(poll, 50);
+                    return;
+                }
+                init('poll');
+            };
+
+        if (doc.readyState == 'complete') {
+            callback.call(win, 'lazy');
+        } else {
+            if (doc.createEventObject && root.doScroll) {
+                try { top = !win.frameElement; } catch(e) { }
+                if (top) { poll(); }
+            }
+            doc[add](pre + 'DOMContentLoaded', init, false);
+            doc[add](pre + 'readystatechange', init, false);
+            win[add](pre + 'load', init, false);
+        }
+    }
+
+    // Given a list of URLs to stylesheets, loads the first that loads without
+    // triggering an error event.
+    function loadStylesheetsFallingBack(stylesheets) {
+        var n = stylesheets.length;
+        function load(i) {
+            if (i === n) { return; }
+            var link = doc.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            if (i + 1 < n) {
+                // http://pieisgood.org/test/script-link-events/ indicates that many
+                // versions of IE do not support onerror on <link>s, though
+                // http://msdn.microsoft.com/en-us/library/ie/ms535848(v=vs.85).aspx
+                // indicates that recent IEs do support error.
+                link.error = link.onerror = function () { load(i + 1); };
+            }
+            link.href = stylesheets[i];
+            head.appendChild(link);
+        }
+        load(0);
+    }
+
+    var scriptQuery = '';
+    // Look for the <script> node that loads this script to get its parameters.
+    // This starts looking at the end instead of just considering the last
+    // because deferred and async scripts run out of order.
+    // If the script is loaded twice, then this will run in reverse order.
+    var scripts = doc.getElementsByTagName('script');
+    for (var i = scripts.length; --i >= 0;) {
+        var script = scripts[i];
+        var match = script.src.match(
+            /^[^?#]*\/run_prettify\.js(\?[^#]*)?(?:#.*)?$/);
+        if (match) {
+            scriptQuery = match[1] || '';
+            // Remove the script from the DOM so that multiple runs at least run
+            // multiple times even if parameter sets are interpreted in reverse
+            // order.
+            script.parentNode.removeChild(script);
+            break;
+        }
+    }
+
+    // Pull parameters into local variables.
+    var autorun = false;
+    var langs = [];
+    var skins = [];
+    var callbacks = [];
+    scriptQuery.replace(
+        /[?&]([^&=]+)=([^&]+)/g,
+        function (_, name, value) {
+            value = decodeURIComponent(value);
+            name = decodeURIComponent(name);
+            if (name == 'autorun')   { autorun = !/^[0fn]/i.test(value); } else
+            if (name == 'lang')      { langs.push(value);                } else
+            if (name == 'skin')      { skins.push(value);                } else
+            if (name == 'callback')  { callbacks.push(value);            }
+        });
+
+    // Use https to avoid mixed content warnings in client pages and to
+    // prevent a MITM from rewrite prettify mid-flight.
+    // This only works if this script is loaded via https : something
+    // over which we exercise no control.
+    var LOADER_BASE_URL =
+        'https://cdn.rawgit.com/google/code-prettify/master/loader';
+
+    for (var i = 0, n = langs.length; i < n; ++i) (function (lang) {
+        var script = doc.createElement("script");
+
+        // Excerpted from jQuery.ajaxTransport("script") to fire events when
+        // a script is finished loading.
+        // Attach handlers for each script
+        script.onload = script.onerror = script.onreadystatechange = function () {
+            if (script && (
+                !script.readyState || /loaded|complete/.test(script.readyState))) {
+                // Handle memory leak in IE
+                script.onerror = script.onload = script.onreadystatechange = null;
+
+                --pendingLanguages;
+                checkPendingLanguages();
+
+                // Remove the script
+                if (script.parentNode) {
+                    script.parentNode.removeChild(script);
+                }
+
+                script = null;
+            }
+        };
+
+        script.type = 'text/javascript';
+        script.src = LOADER_BASE_URL
+            + '/lang-' + encodeURIComponent(langs[i]) + '.js';
+
+        // Circumvent IE6 bugs with base elements (#2709 and #4378) by prepending
+        head.insertBefore(script, head.firstChild);
+    })(langs[i]);
+
+    var pendingLanguages = langs.length;
+    function checkPendingLanguages() {
+        if (!pendingLanguages) {
+            win.setTimeout(onLangsLoaded, 0);
+        }
+    }
+
+   /* var skinUrls = [];
+    for (var i = 0, n = skins.length; i < n; ++i) {
+        skinUrls.push(LOADER_BASE_URL
+            + '/skins/' + encodeURIComponent(skins[i]) + '.css');
+    }
+    skinUrls.push(LOADER_BASE_URL + '/prettify.css');
+    loadStylesheets*/
+    var prettyPrint = (function () {
+        /* @include prettify.js */
+        return prettyPrint;
+    })();
+
+    // If this script is deferred or async and the document is already
+    // loaded we need to wait for language handlers to load before performing
+    // any autorun.
+    function onLangsLoaded() {
+        if (autorun) {
+            contentLoaded(
+                function () {
+                    var n = callbacks.length;
+                    var callback = n ? function () {
+                            for (var i = 0; i < n; ++i) {
+                                (function (i) {
+                                    win.setTimeout(
+                                        function () {
+                                            win['exports'][callbacks[i]].apply(win, arguments);
+                                        }, 0);
+                                })(i);
+                            }
+                        } : void 0;
+                    prettyPrint(callback);
+                });
+        }
+    }
+    checkPendingLanguages();
+
+}());

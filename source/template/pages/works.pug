@@ -3,7 +3,7 @@ include ../common/_mixins
 
 block variables
   - var title = 'Портфолио Мирошина Павла::Мои работы'
-
+  - var script = 'blur.init();slider.init();arrow.init(".l-header__arrow",".c-full-block");'
 block content
   .wrapper
     .l-header
@@ -93,4 +93,3 @@ block content
           use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
 
   include ../common/footer
-  script(src='/assets/js/app.js' defer)

@@ -150,7 +150,33 @@
   }
 
   .l-blog-lnav {
-    display:none;
+    pointer-events: none;
+    position: fixed;
+    background: $main_color;
+    color: #fff;
+    height: 100vh;
+    top: 0px;
+    left: -310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:before {
+      content: '';
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: $main_color;
+      pointer-events: all;
+      position: absolute;
+      @include centeredY();
+      left: calc(100% - 50px);
+    }
+    &__item {
+      color: #fff !important;
+      &.item_active {
+        color: #fff !important;
+      }
+    }
   }
   .c-blog-articles {
     padding-left: 24px;

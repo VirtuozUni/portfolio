@@ -18,10 +18,15 @@ module.exports = function() {
         return $.gulp.src('./source/style/fontAwesome.css')
             .pipe($.gulp.dest($.config.root + '/assets/css'));
     });
+    $.gulp.task('copy:includes', function() {
+        return $.gulp.src('./source/includes/*')
+            .pipe($.gulp.dest($.config.root + '/assets/includes'));
+    });
     $.gulp.task('copy',
         $.gulp.parallel(
             'copy:fonts',
             'copy:image',
-            'copy:awersome.css'
+            'copy:awersome.css',
+            'copy:includes'
         ));
 };
