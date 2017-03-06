@@ -3,7 +3,7 @@ include ../common/_mixins
 
 block variables
   - var title = 'Портфолио Мирошина Павла::Мои работы'
-  - var script = 'blur.init();slider.init();arrow.init(".l-header__arrow",".c-full-block");'
+  - var script = 'works.init()'
 block content
   .wrapper
     .l-header
@@ -82,9 +82,9 @@ block content
         .l-callback__callback-place
           .blur
           .c-subtitle Связаться со мной
-          input(type="text" placeholder="Имя").l-callback__name
-          input(type="text" placeholder="Email").l-callback__mail
-          textarea(placeholder="Ваше сообщение" rows="6").l-callback__message
+          input(type="text" placeholder="Имя").l-callback__name.c-input-not-icon#l-callback__name
+          input(type="text" placeholder="Email").l-callback__mail.c-input-not-icon#l-callback__mail
+          textarea(placeholder="Ваше сообщение" rows="6").l-callback__message.c-input-not-icon#l-callback__message
           ul.c-bottom-buttons
             +menuItem('c-bottom-buttons__button','c-button__link',[{title: "Отправить", link: "#"}, {
                 title: 'Очистить',

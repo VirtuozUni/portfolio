@@ -112,6 +112,18 @@ input, textarea {outline: none;}
     @include centered();
   }
 }
+.c-input-not-icon {
+  border: 1px solid #fff;
+}
+.c-input-not-icon.error {
+  border: 1px solid $error_color;
+  color: $error_color;
+}
+
+.c-input-not-icon.valide {
+  border: 1px solid $error_color;
+  color: $error_color;
+}
 
 .c-popup-error {
   position: absolute;

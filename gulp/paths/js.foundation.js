@@ -8,6 +8,7 @@ module.exports = [
   './source/js/message.js',
   './source/js/welcome.js',
   './source/js/blur.js',
+  './source/js/works.js',
   './source/js/slider.js',
   './source/js/preloader.js',
   './source/js/arrows.js',
