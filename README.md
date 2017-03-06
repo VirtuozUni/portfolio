@@ -8,4 +8,7 @@ LOFTSCHOOL
 Использован макет `Mountains`
 ***
 Список изменений:
-* Сверстаны страницы: "Welcome", "About", "Works"
+* Сверстаны страницы: "Welcome", "About", "Works", "Blog"
+* Сделана адаптивная верстка
+* Добавлен parallax
+* Добавлены JS

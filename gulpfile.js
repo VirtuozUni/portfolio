@@ -41,3 +41,24 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+
+$.gulp.task('release', $.gulp.series(
+    'clean',
+    $.gulp.parallel(
+        'sprite:svg',
+        'sprite'
+    ),
+    $.gulp.parallel(
+        'sass',
+        'sprite:svg-style',
+        'pug',
+        'js:foundation',
+        'js:process',
+        'copy-release',
+        'css:foundation'
+    ),
+    $.gulp.parallel(
+        'watch',
+        'serve'
+    )
+));

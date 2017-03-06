@@ -11,6 +11,10 @@ module.exports = function() {
     });
     $.gulp.task('copy:image', function() {
         return $.gulp.src('./source/images/**/*.*', { since: $.gulp.lastRun('copy:image') })
+            .pipe($.gulp.dest($.config.root + '/assets/img'));
+    });
+    $.gulp.task('copy:image-release', function() {
+        return $.gulp.src('./source/images/**/*.png', { since: $.gulp.lastRun('copy:image') })
             .pipe($.gp.tinypng('Qt0rYOPqMmad983gXtwnOEhNrMCaFELA'))
             .pipe($.gulp.dest($.config.root + '/assets/img'));
     });
@@ -26,6 +30,13 @@ module.exports = function() {
         $.gulp.parallel(
             'copy:fonts',
             'copy:image',
+            'copy:awersome.css',
+            'copy:includes'
+        ));
+    $.gulp.task('copy-release',
+        $.gulp.parallel(
+            'copy:fonts',
+            'copy:image-release',
             'copy:awersome.css',
             'copy:includes'
         ));

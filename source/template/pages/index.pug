@@ -5,10 +5,7 @@ block variables
   - var script = 'welcome.init()'
 
 block content
-  .preloader
-    .preloader__container
-      .preloader__animation
-      .preloader__proc 0%
+  include ../common/preloader
   .l-background#parallax
     .parallax_layer
       img(src='./assets/img/parallax/parallax-1.png')

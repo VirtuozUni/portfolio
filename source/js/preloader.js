@@ -20,7 +20,6 @@ var preloader = (function(){
 
     var setPercents = function(total, current) {
         var percents = Math.ceil(current / total * 100);
-        console.log(percents);
         $('.preloader__proc').text(percents + '%');
 
         if (percents >= 100)
@@ -39,7 +38,6 @@ var preloader = (function(){
             });
 
             fakeImage.on('load error', function(){
-                console.log(this);
                 percentsTotal++;
                 setPercents(images.length, percentsTotal);
             });
