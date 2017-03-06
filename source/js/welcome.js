@@ -62,22 +62,46 @@ var welcome = (function(){
         preloader: function() {
             preloader.init();
         },
-        message: function(text){
-            alert(text);
-        },
         login: function() {
-          $('.c-side-content.back .l-welcome-buttons__button:last-child .c-button__link')[0].click(function(){
-                if($('#robot:checked').length == 0) blog.message('Вы робот!');
-                else if($('#robot-yes:checked').length == 0) blog.message('Вы робот!');
-                else {
-
+            $('#login, #password').focusin(function(){
+                var id = $(this).attr('id');
+                removePopup($('#'+id+'__popup'));
+            });
+            $('#login, #password').focusout(function(){
+                var id =$(this).attr('id');
+                if($(this).val().length > 0)
+                    $('label.input-icon[for='+id+']').removeClass('error').addClass('valide');
+                else
+                {
+                    var label = $(this).attr('placeholder').toLowerCase();
+                    $('label.input-icon[for='+id+']').removeClass('valide').addClass('error');
+                    getPopupError('Вы не ввели '+label,$('#'+id),$('.l-welcome-box .back'));
                 }
-          });
+            });
+            $('.c-side-content.back .l-welcome-buttons__button:last-child .c-button__link').click(function(){
+                  if($('#login').val().length == 0 || $('#password').val().length == 0) {
+                      if ($('#login').val().length == 0) {
+                          removePopup($('#login__popup'));
+                          $('label.input-icon[for=login]').removeClass('valide').addClass('error');
+                          getPopupError('Вы не ввели логин',$('#login'),$('.l-welcome-box .back'));
+                      }
+                      if ($('#password').val().length == 0) {
+                          $('label.input-icon[for=password]').removeClass('valide').addClass('error');
+                          getPopupError('Вы не ввели пароль',$('#password'),$('.l-welcome-box .back'));
+                      }
+                  }
+                  else if($('#robot:checked').length == 0) message.init('Вы робот!');
+                  else if($('#robot-yes:checked').length == 0) message.init('Вы робот!');
+                  else {
+
+                  }
+            });
         },
         init: function() {
             this.flipper();
             this.parallax();
             this.preloader();
+            this.login();
         }
     }
 }());

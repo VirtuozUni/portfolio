@@ -5,6 +5,7 @@ module.exports = [
   './source/js/prettify.js',
   './source/js/run_prettify.js',
   './source/js/app.js',
+  './source/js/message.js',
   './source/js/welcome.js',
   './source/js/blur.js',
   './source/js/slider.js',

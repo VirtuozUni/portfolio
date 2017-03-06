@@ -75,29 +75,5 @@
     font-family: 'Roboto Bold';
   }
 
-  .input-w-icon {
-    border: none;
-    height: 45px;
-    border-radius: 4px;
-    background: #fff;
-    padding-left: 55px;
-    width: calc(100% - 40px);
-    margin: 0px 20px;
-  }
-  .input-icon {
-    background: #f0efe9;
-    height: 45px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    display: inline-block;
-    position: absolute;
-    left: 20px;
-    width: 45px;
-    .fa {
-      color: #c4cbcd;
-      position: absolute;
-      @include centered();
-    }
-  }
 
 }

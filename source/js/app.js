@@ -6,6 +6,17 @@ function getMonth(m) {
     var months = new Array('января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря');
     return months[m];
 }
+function removePopup(elem) {
+    elem.slideUp(300,function(){$(this).remove()})
+}
+function getPopupError(text, elem, parent) {
+    var id = elem.attr('id')+'__popup',
+        top = elem[0].offsetTop + elem.height()+15,
+        left = elem[0].offsetLeft;
+    parent.append('<div class="c-popup-error" id="'+id+'">'+text+'</div>');
+    $('#'+id).css('top',top).css('left',left).slideDown(300).click(function(){removePopup($(this))});
+
+}
 
 var isMobile = false;
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)

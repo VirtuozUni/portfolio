@@ -2,7 +2,7 @@ $main_color: #00bfa5;
 $hover_main_color: #009688;
 $h1_color: #373e42;
 $h2_color: #455a64;
-
+$error_color: #e44845;
 @mixin centered() {
   left: 50%;
   top: 50%;
@@ -85,6 +85,7 @@ a {
 }
 @import 'common/prettify';
 @import 'common/welcome';
+@import 'common/message';
 @import 'common/preloader';
 @import 'common/about';
 @import 'common/skills';

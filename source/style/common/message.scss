@@ -1,0 +1,33 @@
+.c-modal {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  display: none;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba($main_color,.5);
+  z-index: 998;
+  &__window {
+    background: #fff;
+    border-radius: 5px;
+    min-width: 280px;
+    min-height: 112px;
+    max-width: 100%;
+    transform: scale(0);
+    transition: all .5s;
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    padding: 20px;
+    text-align: center;
+    &.showed {
+      transform: scale(1);
+      opacity: 1;
+    }
+    .window__text {
+      opacity: .8;
+      margin-bottom: 30px;
+    }
+  }
+}
