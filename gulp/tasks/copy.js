@@ -14,7 +14,7 @@ module.exports = function() {
             .pipe($.gulp.dest($.config.root + '/assets/img'));
     });
     $.gulp.task('copy:image-release', function() {
-        return $.gulp.src('./source/images/**/*.png', { since: $.gulp.lastRun('copy:image') })
+        return $.gulp.src('./source/images/**/*.*', { since: $.gulp.lastRun('copy:image') })
             .pipe($.gp.tinypng('Qt0rYOPqMmad983gXtwnOEhNrMCaFELA'))
             .pipe($.gulp.dest($.config.root + '/assets/img'));
     });
