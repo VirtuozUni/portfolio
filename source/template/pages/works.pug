@@ -5,6 +5,7 @@ block variables
   - var title = 'Портфолио Мирошина Павла::Мои работы'
   - var script = 'works.init()'
 block content
+  +menu()
   .wrapper
     .l-header
       .l-header__bg
@@ -16,8 +17,8 @@ block content
             {icon: "github", link: "http://github.com"},
             {icon: "in", link: "http://linked.in"}
         ])
-      svg.c-header__menu
-        use(xlink:href='assets/img/sprite.svg#hamburger')
+      a.c-header__menu(href='javascript:menu.init()')
+        span
       .l-header__hero
         +hero('c-hero_theme_light',true)
       svg.l-header__arrow
@@ -83,12 +84,12 @@ block content
           .blur
           .c-subtitle Связаться со мной
           input(type="text" placeholder="Имя").l-callback__name.c-input-not-icon#l-callback__name
-          input(type="text" placeholder="Email").l-callback__mail.c-input-not-icon#l-callback__mail
+          input(type="email" placeholder="Email").l-callback__mail.c-input-not-icon#l-callback__mail
           textarea(placeholder="Ваше сообщение" rows="6").l-callback__message.c-input-not-icon#l-callback__message
           ul.c-bottom-buttons
-            +menuItem('c-bottom-buttons__button','c-button__link',[{title: "Отправить", link: "#"}, {
+            +menuItem('c-bottom-buttons__button','c-button__link',[{title: "Отправить", link: "javascript:works.send()"}, {
                 title: 'Очистить',
-                link: '#'}])
+                link: 'javascript:works.clear()'}])
         svg.l-header__arrow
           use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
 

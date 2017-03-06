@@ -12,5 +12,6 @@ module.exports = [
   './source/js/slider.js',
   './source/js/preloader.js',
   './source/js/arrows.js',
+  './source/js/menu.js',
   './source/js/blog.js'
 ];

@@ -24,3 +24,17 @@ mixin contactList(icon,link,text)
         svg.c-item-icon
             use(xlink:href=`assets/img/sprite.svg#${icon}`)
         a(href=`${link}`, target='_blank').c-item-link=text
+mixin menu()
+    .c-menu
+        .c-menu__bg
+        .c-menu__bg.bg_right
+        .c-menu__container
+            ul.c-menu__list
+                +menuItem('c-menu__item','c-menu__link',[{title: "Мои работы", link: "works.html"}, {
+                    title: 'Обо мне',
+                    link: 'about.html'
+                    }, {title: 'Блог', link: 'blog.html'},
+                    {
+                        title: 'Авторизация',
+                        link: 'index.html'
+                    }])

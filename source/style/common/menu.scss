@@ -1,0 +1,133 @@
+.c-menu {
+  position: fixed;
+  display: none;
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  z-index: 100;
+  &__bg {
+    background: rgba($main_color,.87);
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 0%;
+    left: 0%;
+    &.bg_right {
+      left: 100%;
+    }
+  }
+  &__container {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__list {
+    margin: 52px 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    .c-menu__item {
+      padding: 31px 0px;
+      .c-menu__link {
+        color: #fff;
+        font-size: 63px;
+        position: relative;
+        display: block;
+        font-family: "BERNIER Regular";
+        text-decoration: none;
+        transition-duration: .3s;
+        transform: scale(0,0);
+        &:before,&:after {
+          content: '';
+          width: 0px;
+          height: 5px;
+          opacity: 0;
+          position: absolute;
+          transition-duration: .3s;
+          background: #fff;
+          @include centeredY();
+        }
+        &:before{left: -42px;}
+
+        &:after {right: -42px;}
+        &:hover:before,&:hover:after {
+          transition-duration: .3s;
+          opacity: .5;
+          width: 22px;
+        }
+
+      }
+    }
+  }
+}
+
+
+.c-header__menu {
+  display:  inline-block;
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+  top: 30px;
+  z-index: 101;
+}
+.c-header__menu span {
+  margin: 0 auto;
+  position: relative;
+  top: 15px;
+}
+.c-header__menu span:before, .c-header__menu span:after {
+  position: absolute;
+  content: '';
+}
+.c-header__menu span, .c-header__menu span:before, .c-header__menu span:after {
+  width: 40px;
+  height: 5px;
+  border-radius: 3px;
+  background: #fff;
+  display: block;
+}
+.c-header__menu span:before {
+  margin-top: -15px;
+}
+.c-header__menu span:after {
+  margin-top: 15px;
+}
+
+.c-header__menu span {
+  transition-duration: .2s;
+  transition-delay: 0s;
+}
+.c-header__menu.showed span {
+  background-color: rgba(0,0,0,0.0);
+  transition-duration: .2s;
+  transition-delay: 0s;
+}
+.c-header__menu span:before {
+  transition-property: margin, transform;
+  transition-duration: .2s;
+  transition-delay: .2s, 0;
+}
+.c-header__menu.showed span:before {
+  margin-top: 0;
+  transform: rotate(45deg);
+  transition-delay: 0, .2s;
+}
+.c-header__menu span:after {
+  transition-property: margin, transform;
+  transition-duration: .2s;
+  transition-delay: .2s, 0;
+}
+.c-header__menu.showed span:after {
+  margin-top: 0;
+  transform: rotate(-45deg);
+  transition-delay: 0, .2s;
+}

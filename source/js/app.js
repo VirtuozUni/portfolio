@@ -10,9 +10,11 @@ function removePopup(elem) {
     elem.slideUp(300,function(){$(this).remove()})
 }
 function getPopupError(text, elem, parent) {
+    console.log(elem.attr('id'));
     var id = elem.attr('id')+'__popup',
-        top = elem[0].offsetTop + elem.height()+15,
+        top = elem[0].offsetTop + elem[0].offsetHeight+15,
         left = elem[0].offsetLeft;
+    console.log(left, top);
     parent.append('<div class="c-popup-error" id="'+id+'">'+text+'</div>');
     $('#'+id).css('top',top).css('left',left).slideDown(300).click(function(){removePopup($(this))});
 
