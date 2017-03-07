@@ -5,6 +5,7 @@ block variables
   - var title = 'Портфолио Мирошина Павла::Блог'
   - var script = 'arrow.init(".l-header__arrow",".c-blog-articles");blog.init();'
 block content
+  +menu()
   .wrapper
     .l-header.l-header_blog
       .l-header__bg
@@ -14,8 +15,8 @@ block content
             {icon: "github", link: "http://github.com"},
             {icon: "in", link: "http://linked.in"}
         ])
-      svg.c-header__menu
-        use(xlink:href='assets/img/sprite.svg#hamburger')
+      a.c-header__menu(href='javascript:menu.init()')
+          span
       .l-header__hero
         +hero('c-hero_theme_light')
         .c-title.c-title_white Блог

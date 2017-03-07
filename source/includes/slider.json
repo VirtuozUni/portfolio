@@ -1,0 +1,28 @@
+{
+  "slides":[
+    {
+      "img":"work-1.png",
+      "title":"Сайт школы онлайн образования",
+      "lang":"html, css, javascript",
+      "link":"https://loftschool.com/"
+    },
+    {
+      "img":"work-2.png",
+      "title":"Агентство интернет решений",
+      "lang":"html, css, javascript, jQuery",
+      "link":"https://itloft.ru/"
+    },
+    {
+      "img":"work-3.png",
+      "title":"Портал видеоуроков",
+      "lang":"html, css, javascript, Node.JS",
+      "link":"https://yandex.ru/search/?text=%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D1%83%D1%80%D0%BE%D0%BA%D0%BE%D0%B2&lr=213"
+    },
+    {
+      "img":"work-4.png",
+      "title":"ЙОГА ЦЕНТР",
+      "lang":"html, css, javascript",
+      "link":"https://yandex.ru/search/?text=%D0%B9%D0%BE%D0%B3%D0%B0&lr=213"
+    }
+  ]
+}
